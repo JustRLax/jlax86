@@ -1,0 +1,163 @@
+//Header
+.main-header {
+  position: fixed;
+  background: rgba(0,0,0,.86);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3500;
+  max-width: 630px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0 30px;
+  box-shadow: $shadow;
+  border: 1px solid rgba(255,255,255,.2);
+  border-top: none;
+  display: flex;
+  transition: $dt;
+  top: 0;
+  &.hidden {
+    top: -100px;
+  }
+  @include breakpoint(570px) {
+    font-size: 80%;
+  }
+  @include breakpoint(400px) {
+    font-size: 70%;
+    padding: 0 10px;
+  }
+  &.active {
+    top: 0;
+  }
+  .logo {
+    width: 45px;
+    padding: 10px 0;
+  }
+  nav {
+    width: calc(100% - 60px);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(500px) {
+      justify-content: flex-end;
+      width: auto;
+    }
+  }
+  ul {
+    display: inline-block;
+    width: 100%;
+    margin-left: 40px;
+    @include breakpoint(570px) {
+      margin-left: 20px;
+    }
+    @include breakpoint(400px) {
+      margin-left: 5px;
+    }
+  }
+  li {
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    @include breakpoint(660px) {
+      margin-right: 20px;
+    }
+    @include breakpoint(470px) {
+      &:first-of-type {
+        display: none;
+      }
+    }
+    a {
+      color: rgba(255,255,255,.7);
+      font-size: 1em;
+      font-weight: 700;
+      font-family: $oswald;
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: $dt;
+      padding-bottom: 20px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background: $red;
+        transition: $dt;
+        position: absolute;
+        transform: scale(0);
+      }
+      &:hover, &.active {
+        color: $white;
+        &:before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .button {
+    display: inline-block;
+    background: $white;
+    color: $purple;
+    font-weight: 700;
+    font-size: .875em;
+    padding: 8px 20px;
+    border-radius: 3px;
+    &:hover {
+      background: $red;
+      color: $white;
+    }
+    @include breakpoint(500px) {
+      padding: 0;
+      background: none;
+      color: $white;
+      font-size: 1em;
+      &:hover {
+        background: none;
+        color: $red;
+      }
+    }
+  }
+  .dropdown {
+    display: none;
+    &.active {
+      display: block;
+      @include animated(.375s);
+      @include fadeInLeft;
+    }
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    margin-left: -50px;
+    width: 276px;
+    padding: 20px 20px 10px;
+    background: $teal;
+    box-shadow: $shadow;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    @include breakpoint(600px) {
+      margin-left: -150px;
+    }
+    @include breakpoint(400px) {
+      margin-left: -180px;
+    }
+    li {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      display: block;
+      padding: 0 0 10px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

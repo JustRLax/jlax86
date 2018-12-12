@@ -1,0 +1,37 @@
+---
+label: post
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: A title for the post
+  config:
+    required: true
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: An optional subtitle for the post
+- type: textarea
+  name: content
+  label: Content
+  description: The content of the post
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+    required: true
+- type: text
+  hidden: true
+  label: Layout
+  name: layout
+  description: Default Post Layout
+  default: post
+pages:
+- _posts/2018-06-20-new-example-post.md
+- _posts/2018-06-18-blog-post-4.md
+- _posts/2018-06-18-blog-post-3.md
+- _posts/2018-06-18-blog-post-2.md
+- _posts/2018-06-18-blog-post-1.md
+- _posts/2018-06-18-example-post.md

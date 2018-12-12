@@ -1,0 +1,86 @@
+//About Box
+.no-touch {
+  #about {
+    position: absolute;
+    left: 0;
+    top: -350px;
+  }
+}
+.about {
+  padding: 40px 0 200px;
+  background: $purple;
+  position: relative;
+  z-index: 10;
+  @include breakpoint(600px) {
+    font-size: 80%;
+    padding: 0 0 60px;
+  }
+  .container {
+    @include breakpoint(600px) {
+      padding: 0 20px;
+    }
+  }
+  a {
+    color: $white;
+    z-index: 10;
+    @include a-link;
+  }
+  &__content {
+    width: 100%;
+    padding: 60px 70px 80px;
+    border: 1px solid $white;
+    color: $white;
+    position: relative;
+    opacity: var(--abt);
+    transform: translateY(var(--abv));
+    will-change: opacity transform;
+    @include breakpoint(600px) {
+      padding: 40px 40px 60px;
+    }
+    //Inner Border
+    &:after {
+      content: '';
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      border: 1px solid $teal;
+      @include breakpoint(600px) {
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        left: 15px;
+        top: 15px;
+      }
+    }
+  }
+  &__heading {
+    padding: 20px;
+    background: $purple;
+    @include h2;
+    position: absolute;
+    left: 52px;
+    top: -30px;
+    z-index: 100;
+    @include breakpoint(600px) {
+      font-size: 1.125em;
+      top: -24px;
+      padding-left: 15px;
+      left: 25px;
+    }
+  }
+  p {
+    font-size: 1.125em;
+    line-height: 2.2;
+  }
+  &__jagged {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: -28px;
+    .a-jagged {
+      fill: $purple;
+    }
+  }
+}

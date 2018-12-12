@@ -1,0 +1,87 @@
+//List Dropdown
+.list-dropdown {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background: $white;
+  border-radius: 6px;
+  transition: $dt;
+  width: 280px;
+  z-index: 1000;
+  .title {
+    float: left;
+    width: 100%;
+    padding: 14px 20px;
+    padding-right: 60px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: $purple;
+    white-space: nowrap;
+    box-shadow: $shadow;
+    //arrow
+    &:after {
+      content: '';
+      width: 11px;
+      height: 9px;
+      background: url(../resources/arrow.svg) no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      right: 20px;
+      backface-visibility: hidden;
+      transition: $dt;
+    }
+  }
+  ul {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 100%;
+    max-height: 260px;
+    overflow-y: scroll;
+    max-width: 100%;
+    background: #fff;
+    padding: 0;
+    z-index: 400;
+    box-shadow: $shadow;
+    display: none;
+    border-radius: 6px;
+    @include breakpoint(700px) {
+      width: 100%;
+    }
+  }
+  a {
+      width: 100%;
+      color: $purple;
+      background: $white;
+      font-size: .875em;
+      font-weight: 900;
+      padding: 10px 20px;
+      display: block;
+      transition: $dt;
+      text-decoration: none;
+      &:hover {
+        background: $teal;
+        color: $white;
+      }
+  }
+  li {
+      float: left;
+      width: 100%;
+      &.active {
+        display: none;
+      }
+  }
+  &.open {
+    .title:after {
+      transform: rotate(-180deg);
+    }
+    ul {
+      display: block;
+      @include animated(.375s);
+      @include fadeInDown;
+    }
+  }
+}

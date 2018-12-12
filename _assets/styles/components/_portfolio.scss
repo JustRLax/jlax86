@@ -1,0 +1,52 @@
+//Portfolio
+.portfolio {
+  position: relative;
+  padding: 100px 0 60px;
+  background: $white;
+  z-index: 2;
+  @include breakpoint(800px) {
+    padding: 60px 0;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(600px) {
+      font-size: 80%;
+    }
+    h2 {
+      width: 250px;
+      @include h2;
+      color: $purple;
+      letter-spacing:  5px;
+      text-transform: uppercase;
+      @include breakpoint(760px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      font-size: 1.125em;
+      line-height: 2.2;
+      width: calc(100% - 250px);
+      position: relative;
+      top: 2px;
+      @include breakpoint(760px) {
+        width: 100%;
+        top: 0;
+      }
+    }
+  }
+  &__jagged {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: -28px;
+    transform: scaleX(-1);
+  }
+  &__content {
+    position: relative;
+    z-index: 100;
+  }
+}

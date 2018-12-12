@@ -1,0 +1,124 @@
+//city
+.city {
+  fill:#6a4353;
+}
+
+//bird
+.bird {
+  fill: #333;
+}
+
+//ground
+.ground {
+  fill: $purple;
+}
+
+//ground
+.cap {
+  fill: $purple;
+}
+
+//jlax logo
+.jlax {
+  fill: $white;
+}
+
+//speedbag
+.speedbag {
+  fill:$purple
+}
+.bag {
+  fill:$purple;
+  transition: $transition;
+}
+
+//sniper
+.snipe {
+  fill:$purple
+}
+.sniper {
+  fill:$purple;
+  transition: $transition;
+}
+
+//bike
+.wheels {
+  fill:$purple
+}
+.bikeframe {
+  fill:$purple;
+  transition: $transition;
+}
+
+//Helmet
+.helmet {
+  fill:$purple;
+  transition: $transition;
+}
+
+//Speaker
+.speaker {
+  fill:$purple;
+  transition: $transition;
+}
+
+
+//Cat
+.cat-a{fill:$purple; transition: $transition;}
+.cat-b{fill:#DF6C42; transition: $transition;}
+
+//Close
+.a-close {
+  fill: $white;
+  transition: $transition;
+  &:hover {
+    fill: $teal;
+  }
+}
+//Box
+.a-box,
+.b-box {
+  fill:none;
+  stroke-dasharray: 2350;
+  stroke-dashoffset: 4700;
+  //stroke-dashoffset: 7050;
+}
+.a-box {
+  stroke: $white;
+}
+.b-box {
+  stroke: $teal;
+}
+
+//Jagged Bottom
+.a-jagged{fill:$white;}
+
+//Play button
+.play-a{
+  fill:#fff;
+}
+
+//Learn Drifting Logo
+//Letters
+.lda{fill: $white;}
+//Box
+.ldb{fill: $red;}
+//Kanji
+.ldc{fill: $white;}
+
+
+.a-logo {
+  fill: $white;
+}
+
+//Footer Icons
+.f-icon {
+  fill: $white;
+  transition: $transition;
+}
+
+//Download
+.a-download {
+  fill: $red;
+  transition: $transition;
+}

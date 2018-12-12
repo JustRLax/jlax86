@@ -1,0 +1,95 @@
+//Client Work Page
+.no-touch .client-work {
+  background-attachment: fixed;
+  background-size: cover
+}
+.client-work {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 150px 0 0;
+  background: url(../resources/project-bg.jpg) top center no-repeat #000;
+  background-size: contain;
+  position: relative;
+  z-index: 300;
+  &:after {
+    @include content100;
+    background: $black-grad-2;
+  }
+  &:before {
+    @include content100;
+    background: #000;
+    opacity: .5;
+  }
+  .container {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 100px;
+    color: $white;
+  }
+  h1 {
+    margin-bottom: 40px;
+    font-size: 3em;
+    font-weight: 700;
+    font-family: $oswald;
+  }
+  &__personal {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    .item {
+      width: 46%;
+      margin-bottom: 20px;
+      @include breakpoint(670px) {
+        width: 100%;
+      }
+    }
+    p {
+      font-family: $oswald;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  }
+  &__projects {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .project {
+      width: 46%;
+      margin: 0 0 30px;
+      padding-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,.3);
+      @include breakpoint(670px) {
+        width: 100%;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+      }
+      h2 {
+        font-family: $oswald;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        line-height: 1.6;
+      }
+      p {
+        line-height: 1.6;
+      }
+      .button:hover{
+        background: $white;
+        color: $purple;
+      }
+      &__content {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+// Variables for global use
+
+//Cloudinary Image https://res.cloudinary.com/justinlaxamana/xxxxxx.jpg
+//**** Colors
+$purple: #2A2240;
+$white: #fff;
+$teal: #0E5664;
+$red: #D0021B;
+
+//Selection
+::-moz-selection {
+  background: $red;
+  color: $white;
+}
+::selection {
+  background: $red;
+  color: $white;
+}
+
+//Shadows
+$shadow: 0 0 40px 0 rgba(0,0,0,.20);
+$shadow-lrg: 0 20px 60px 0 rgba(0,0,0,.50);
+$shadow-sm: 0 6px 20px 0 rgba(0,0,0,.1);
+$shadow-hov: 0 10px 40px 0 rgba(0,0,0,.25);
+
+//Gradient
+$black-grad: linear-gradient(-180deg, rgba(0,0,0,.2) 30%, rgba(0,0,0,.8) 79%);
+$black-grad-2: linear-gradient(-180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.9) 100%);
+$black-grad-3: linear-gradient(-180deg, rgba(0,0,0,.6) 30%, rgba(0,0,0,.8) 79%);
+
+$black-grad-4: linear-gradient(-180deg, rgba(0,0,0,.66) 30%, rgba(0,0,0,.86) 79%);
+
+$white-grad: linear-gradient(0deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,1) 100%);
+
+$white-grad-top: linear-gradient(0deg, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%);
+$white-grad-bottom: linear-gradient(180deg, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%);
+
+$blue-grad: linear-gradient(130deg, rgba(81,163,210,.5) 0%, rgba(40,106,166,1.0) 83%);
+
+
+//**** Typography
+$oswald: 'Oswald', sans-serif;
+$lato: 'Lato', sans-serif;
+
+
+//**** Transitions
+$transition: .3s all ease-in-out;
+$dt: .3s all ease-in-out;
+
+//**** Animations
+@include setup-fadeInUp;
+@include setup-fadeIn;
+@include setup-fadeOut;
+@include setup-fadeInLeft;
+@include setup-fadeInRight;
+@include setup-fadeInDown;
+@include setup-fadeOutDown;
+
+//Containers
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+//Button
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  letter-spacing: 2px;
+  background: $red;
+  text-transform: uppercase;
+  font-family: $oswald;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: $white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: $transition;
+}
+.special.button {
+  width: 100%;
+  text-align: right;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid $white;
+  span {
+    display: block;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      background: $black-grad-2;
+      transition: $transition;
+      opacity: 0;
+    }
+  }
+  &:hover {
+    background: $red;
+    span:before {
+      opacity: .7;
+    }
+    &:before  {
+      transform: rotate(45deg) scale(1.2);
+    }
+  }
+  &:before {
+    content: '';
+    width: 30px;
+    height: 300px;
+    transform: rotate(45deg);
+    background: $white;
+    position: absolute;
+    left: 80px;
+    top: -200px;
+    transition: $transition;
+  }
+  &:after {
+    content: '';
+    width: 20px;
+    height: 300px;
+    transform: rotate(45deg);
+    background: $white;
+    position: absolute;
+    left: 140px;
+    top: -200px;
+  }
+}
+
+//IMG FUll
+.img-full {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
