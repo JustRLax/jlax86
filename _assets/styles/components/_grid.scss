@@ -133,7 +133,8 @@
     &__header {
       width: 100%;
       padding: 0 15px;
-      margin-top: -150px;
+      margin-top: -50px;
+      margin-bottom: 10px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -141,23 +142,33 @@
       @include breakpoint(900px) {
         margin-top: 0px;
       }
+      @include breakpoint(530px) {
+        padding: 0;
+      }
       h2 {
         width: 100%;
         @include h2(10px);
+        @include breakpoint(530px) {
+          margin-left: 10px;
+        }
       }
       .grid-section__item {
         margin-left: -15px;
-        width: 380px;
         position: relative;
+        width: 580px;
+        .image {
+          display: block;
+          width: 100%;
+        }
         @include breakpoint(940px) {
-          width: 60%;
-          .image {
-            width: 400px;
-            max-width: 100%;
-          }
+          width: 420px;
+        }
+        @include breakpoint(740px) {
+          width: 59%;
         }
         @include breakpoint(530px) {
           width: 100%;
+          margin-left: 0;
         }
       }
       .content {
@@ -212,13 +223,13 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-        @include breakpoint(1080px) {
+        @include breakpoint(1200px) {
           width: calc(100% - 700px);
           padding: 10px;
-          margin-top: 15px;
         }
         @include breakpoint(940px) {
           width: 200px;
+          margin-top: 0;
         }
         @include breakpoint(530px) {
           display: none;
@@ -238,8 +249,13 @@
     &__item {
       width: calc(100% / 3);
       position: relative;
-      @include breakpoint(720px) {
+      padding: 15px;
+      @include breakpoint(900px) {
         width: 50%;
+      }
+      @include breakpoint(530px) {
+        width: 100%;
+        padding: 8px;
       }
       .quote {
         position: absolute;
@@ -260,14 +276,36 @@
           @include cite;
         }
       }
+      .soon {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        background: $black-grad-3;
+        color: $white;
+        font-family: $oswald;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        z-index: 1000;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: .875em;
+        @include breakpoint(530px) {
+          left: 8px;
+          top: 8px;
+          width: calc(100% - 16px);
+          height: calc(100% - 16px);
+        }
+        span {
+          display: inline-block;
+        }
+      }
       .image {
         width: 100%;
-        border: 15px solid transparent;
         position: relative;
         transition: $dt;
-        @include breakpoint(550px) {
-          border: 8px solid transparent;
-        }
         &:after {
           @include content100;
           box-shadow: $shadow-lrg;

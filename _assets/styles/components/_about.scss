@@ -24,6 +24,7 @@
     color: $white;
     z-index: 10;
     @include a-link;
+    white-space: nowrap;
   }
   &__content {
     width: 100%;
