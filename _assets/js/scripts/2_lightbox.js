@@ -95,3 +95,8 @@ $('.fight-modal').magnificPopup({
     },
     type: 'image' // this is a default type
 });
+
+$('.touch .grid-section__item .image').on("click", function(e){
+  $(this).toggleClass('active');
+  e.preventDefault();
+});
