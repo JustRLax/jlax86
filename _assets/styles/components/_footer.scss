@@ -1,4 +1,13 @@
 //Footer
+.safari {
+  background: #000;
+  .no-touch {
+    .footer {
+      top: 0;
+      height: calc(100vh + 200px);
+    }
+  }
+}
 .no-touch {
   .footer {
     z-index: 1;
