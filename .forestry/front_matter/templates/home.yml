@@ -4,10 +4,10 @@ hide_body: false
 is_partial: false
 fields:
 - type: text
-  label: Name
+  label: Intro Name
   config:
     required: true
-  name: name
+  name: intro_name
 - type: textarea
   label: About
   config:
