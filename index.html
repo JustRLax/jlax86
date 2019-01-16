@@ -40,8 +40,12 @@ client_work:
   <div class="projects">
     <div class="projects__project projects__project--fixed" style="background-image:url(assets/resources/project-bg.jpg);">
       <section class="projects__block">
+        {% for client_work in site.client_work %}
+
         <h2>{{ client_work.intro }}</h2>
         {{ client_work.description }}
+
+        {% endfor %}
         <a href="/projects" class="button">View Projects</a>
       </section> <!-- / __block -->
     </div> <!-- / __project -->
