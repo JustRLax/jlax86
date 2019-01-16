@@ -1,5 +1,61 @@
 ---
 layout: default
 ---
-
+<div class="scene intro">
+  <a href="#about" class="scene__sun anchor">
+    {% svg ../../assets/resources/jlax-logo.svg %}
+    <span class="hello">Welcome to jlax86.com</span>
+  </a> <!-- / __sun -->
+  <div class="scene__sky scene__sky--dark"></div>
+  <div class="scene__sky scene__sky--light"></div>
+  <div class="scene__hills-back">
+    {% svg ../../assets/resources/hills-back.svg %}
+  </div> <!-- / __hills-back -->
+  <div class="scene__hills-front">
+    {% svg ../../assets/resources/hills-front.svg %}
+  </div> <!-- / __hills-front -->
+  <div class="scene__city">
+    {% svg ../../assets/resources/city.svg %}
+  </div> <!-- / __city -->
+  <div class="scene__water"></div> <!-- / __water -->
+  <div class="scene__foreground ground">
+    <div class="scene__foreground__left">
+      {% svg ../../assets/resources/foreground.svg %}
+    </div> <!-- / __left -->
+    <div class="scene__foreground__right">
+      {% svg ../../assets/resources/foreground-cap.svg %}
+    </div> <!-- / __right -->
+    <ul class="scene__items">
+      <li class="scene__items__speedbag item" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <a href="#fight" class="fight-modal">
+          {% svg ../../assets/resources/speedbag.svg %}
+        </a>
+      </li> <!-- / __sniper -->
+      <li class="scene__items__bike item" data-aos="fade-right" data-aos-delay="470" data-aos-easing="ease-in-out" data-aos-duration="1000">
+        <a href="#bikes" class="open-slider bikes-modal">
+        {% svg ../../assets/resources/bike.svg %}
+        </a>
+      </li> <!-- / __bike -->
+      <li class="scene__items__helmet item" data-aos="fade-down" data-aos-delay="460" data-aos-easing="ease-in-out" data-aos-duration="700">
+        <a href="#cars" class="cars-modal">
+          {% svg ../../assets/resources/helmet.svg %}
+        </a>
+        <!--<div class="tooltip">
+          <p>86</p>
+        </div>  / .tooltip -->
+      </li> <!-- / __helmet -->
+      <li class="scene__items__cat item" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <a href="#cat" class="open-modal">
+          {% svg ../../assets/resources/cat.svg %}
+        </a>
+      </li> <!-- / __cat -->
+    </ul> <!-- / __items -->
+  </div> <!-- / __foreground -->
+  <div class="scene__bird scene__bird--higher">
+    {% svg ../../assets/resources/bird.svg %}
+  </div> <!-- / __bird -->
+  <div class="scene__bird scene__bird--lower">
+    {% svg ../../assets/resources/bird.svg %}
+  </div> <!-- / __bird -->
+</div> <!-- / .scene -->
 {{ content }}
