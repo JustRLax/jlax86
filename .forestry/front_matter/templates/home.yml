@@ -11,7 +11,7 @@ fields:
 - type: textarea
   label: About
   config:
-    wysiwyg: true
+    wysiwyg: false
     schema:
       format: html-blocks
   name: about
