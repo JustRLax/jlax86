@@ -63,12 +63,9 @@ undefined: []
         <div class="list-dropdown">
           <span class="title">Select stage..</span>
           <ul>
-            <li><a href="/fb3">Final Bout 3</a></li>
-            <li><a href="/matsuri">Super D Matsuri 2018</a></li>
-            <li><a href="/jam">Club FR Jam 2018</a></li>
-            <li><a href="/mwt">Super D Midwest Trial</a></li>
-            <li><a href="/riobash">Rio Bash</a></li>
-            <li><a href="/misc">Miscellaneous</a></li>
+            {% for dropdown in page.drift_videos.dropdown %}
+            <li><a href="{{ dropdown.page_url }}">{{ dropdown.page_name }}</a></li>
+            {% endfor %} 
           </ul>
         </div> <!-- / .list-dropdown -->
       </section> <!-- / __block -->
