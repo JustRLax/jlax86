@@ -58,11 +58,11 @@ fields:
       label: Page Name
       config:
         required: false
-      default: Super D Matsuri 2018
+      default: ''
     - type: text
       name: page_url
       label: Page URL
-      default: "/matsuri"
+      default: ''
 - type: field_group_list
 pages:
 - index.html
