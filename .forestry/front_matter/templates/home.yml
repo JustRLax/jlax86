@@ -53,15 +53,14 @@ fields:
     name: dropdown
     label: Dropdown
     fields:
-    - type: field_group
-      fields:
-      - type: text
-        name: title
-        label: Title
-      - type: text
-        name: url
-        label: URL
-      label: Page Name
+    - type: text
       name: page_name
+      label: Page Name
+      config:
+        required: false
+    - type: text
+      name: page_url
+      label: Page URL
+- type: field_group_list
 pages:
 - index.html
