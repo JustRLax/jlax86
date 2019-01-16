@@ -35,5 +35,33 @@ fields:
   - type: text
     name: button_url
     label: Button URL
+- type: field_group
+  name: drift_videos
+  label: Drift Videos
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: textarea
+    config:
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Description
+    name: description
+  - type: field_group_list
+    name: dropdown
+    label: Dropdown
+    fields:
+    - type: field_group
+      fields:
+      - type: text
+        name: title
+        label: Title
+      - type: text
+        name: url
+        label: URL
+      label: Page Name
+      name: page_name
 pages:
 - index.html
