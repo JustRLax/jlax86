@@ -15,5 +15,19 @@ fields:
     schema:
       format: html-blocks
   name: about
+- type: field_group
+  name: client_work
+  label: Client Work
+  fields:
+  - type: text
+    name: intro
+    label: Intro
+  - type: textarea
+    config:
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Description
+    name: description
 pages:
 - index.html
