@@ -14,6 +14,8 @@ client_work:
   description: "<p>If you're interested in working with me and curious to see some
     of the work that I've done, the following is a collection of projects done for
     a variety of industries throughout my professional career.</p>"
+  button_text: View Projects
+  button_url: "/projects"
 
 ---
 <div class="foreground ground">
@@ -44,7 +46,7 @@ client_work:
       <section class="projects__block">
         <h2>{{ page.client_work.intro }}</h2>
         {{ page.client_work.description }}
-        <a href="/projects" class="button">View Projects</a>
+        <a href="{{ page.client_work.button_url }}" class="button">{{ page.client_work.button_text }}</a>
       </section> <!-- / __block -->
     </div> <!-- / __project -->
     <div class="projects__project projects__project--fixed" style="background-image:url(assets/resources/drift-bg.jpg);">
