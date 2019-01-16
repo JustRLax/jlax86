@@ -29,5 +29,11 @@ fields:
         format: html-blocks
     label: Description
     name: description
+  - type: text
+    name: button_text
+    label: Button Text
+  - type: text
+    name: button_url
+    label: Button URL
 pages:
 - index.html
