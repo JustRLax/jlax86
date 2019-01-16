@@ -16,6 +16,13 @@ client_work:
     a variety of industries throughout my professional career.</p>"
   button_text: View Projects
   button_url: "/projects"
+drift_videos:
+  title: Drift Videos
+  description: "<p>I have always had a love for Japanese car culture. I started bringing
+    my DSLR to drift events and making little edits for the drifting community on
+    Instagram. After positive feedback, I've decided to host some videos on this website.</p>"
+  dropdown: []
+undefined: []
 
 ---
 <div class="foreground ground">
@@ -51,8 +58,8 @@ client_work:
     </div> <!-- / __project -->
     <div class="projects__project projects__project--fixed" style="background-image:url(assets/resources/drift-bg.jpg);">
       <section class="projects__block">
-        <h2>Drift Videos</h2>
-        <p>I have always had a love for Japanese car culture. I started bringing my DSLR to drift events and making little edits for the drifting community on Instagram. After positive feedback, I've decided to host some videos on this website.</p>
+        <h2>{{ page.drift_videos.title }}</h2>
+        {{ page.drift_videos.description }}
         <div class="list-dropdown">
           <span class="title">Select stage..</span>
           <ul>
