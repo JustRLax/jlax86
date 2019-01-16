@@ -7,14 +7,6 @@ sections:
 - type: jekyll-pages
   label: Pages
   create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
-- type: directory
-  path: _projects
-  label: Projects
-  create: all
-  match: "**/*"
 upload_dir: ''
 public_path: https://res.cloudinary.com/justinlaxamana
 front_matter_path: ''
