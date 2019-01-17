@@ -10,7 +10,7 @@ sections:
 upload_dir: https://res.cloudinary.com/justinlaxamana/image/upload
 public_path: https://res.cloudinary.com/justinlaxamana/image/upload
 front_matter_path: ''
-use_front_matter_path: 
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
