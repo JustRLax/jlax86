@@ -85,9 +85,9 @@ fields:
     name: video_url
     label: Video URL
     description: For Background Video
-  - type: file
-    label: Video Preview
+  - type: text
     name: video_preview
+    label: Video Preview
   - type: text
     name: youtube_url
     label: Youtube URL
