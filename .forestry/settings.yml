@@ -9,10 +9,10 @@ sections:
   create: all
   new_doc_ext: html
 - type: directory
-  path: ''
+  path: _pages
   label: Pages
   create: documents
-  match: _pages/*
+  match: "*"
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
