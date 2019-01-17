@@ -1,0 +1,35 @@
+---
+label: Drift Videos
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: the_name
+  label: Page Name
+- type: textarea
+  name: the_description
+  label: Description
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
+- type: field_group
+  name: featured_images
+  label: Featured Images
+  fields:
+  - type: file
+    name: large
+    label: Large
+  - type: file
+    name: small
+    label: Small
+- type: field_group
+  name: logo
+  label: Logo
+  fields:
+  - type: file
+    name: image
+    label: Image
+  - type: text
+    name: url
+    label: URL
