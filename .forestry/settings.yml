@@ -9,7 +9,7 @@ sections:
   create: all
 upload_dir: https://res.cloudinary.com/justinlaxamana/image/upload
 public_path: https://res.cloudinary.com/justinlaxamana/image/upload
-front_matter_path: ''
+front_matter_path: https://res.cloudinary.com/justinlaxamana/image/upload
 use_front_matter_path: true
 file_template: ":filename:"
 build:
