@@ -7,7 +7,7 @@ sections:
 - type: jekyll-pages
   label: Home
   create: all
-  new_doc_ext: ".html"
+  new_doc_ext: html
 - type: directory
   path: ''
   label: Pages
