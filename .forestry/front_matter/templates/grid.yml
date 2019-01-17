@@ -15,7 +15,7 @@ fields:
     required: true
 - type: text
   label: Name
-  name: name
+  name: pagename
 - type: textarea
   name: description
   label: Description
