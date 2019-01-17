@@ -7,10 +7,10 @@ sections:
 - type: jekyll-pages
   label: Pages
   create: all
-upload_dir: justinlaxamana/image/upload
-public_path: "/justinlaxamana/image/upload"
-front_matter_path: "/justinlaxamana/image/upload"
-use_front_matter_path: true
+upload_dir: ''
+public_path: ''
+front_matter_path: ''
+use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
