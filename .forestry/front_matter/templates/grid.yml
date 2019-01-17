@@ -13,6 +13,9 @@ fields:
   label: Permalink
   config:
     required: true
+- type: text
+  label: Name
+  name: name
 - type: textarea
   name: description
   label: Description
@@ -20,6 +23,4 @@ fields:
     wysiwyg: true
     schema:
       format: html-blocks
-- type: text
-  label: Name
-  name: name
+    required: false
