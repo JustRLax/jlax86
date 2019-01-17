@@ -1,0 +1,11 @@
+---
+label: Grid
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Name
+  name: name
+- type: textarea
+  name: description
+  label: Description
