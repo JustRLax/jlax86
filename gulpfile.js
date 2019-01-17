@@ -13,7 +13,6 @@ let gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     child = require('child_process'),
-    //babel = require('gulp-babel'),
     cloudinary = require('gulp-cloudinary-upload'),
     devTasks = ['styles', 'vendor-js', 'js', 'images', 'svg-images', 'resources', 'browser-sync', 'watch'],
     prodTasks = ['prod-styles', 'prod-vendor-js', 'prod-js', 'prod-images', 'prod-svg-images', 'prod-resources'];
@@ -54,9 +53,6 @@ gulp.task('js', () => {
     '_assets/js/scripts/**/*.js',
   ])
   .pipe(sourcemaps.init())
-  //.pipe(babel({ presets: ['env'] }))
-  // .pipe(jshint())
-  // .pipe(jshint.reporter(stylish))
   .on('error', handleError)
   .pipe(concat('application.js'))
   .pipe(sourcemaps.write())
