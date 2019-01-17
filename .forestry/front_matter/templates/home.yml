@@ -63,19 +63,25 @@ fields:
       name: page_url
       label: Page URL
       default: ''
-- type: field_group_list
-  label: Featured Project
+- type: field_group
   name: featured_project
+  label: Featured Project
   fields:
   - type: text
     name: title
     label: Title
   - type: textarea
+    name: description
+    label: Description
     config:
       wysiwyg: true
       schema:
-        format: html-blocks
-    label: Description
-    name: description
+        format: markdown
+  - type: file
+    name: video_poster
+    label: Video Poster
+  - type: text
+    name: video_url
+    label: Video URL
 pages:
 - index.html
