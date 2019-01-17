@@ -4,6 +4,9 @@ hide_body: false
 is_partial: false
 fields:
 - type: text
+  name: title
+  label: Title
+- type: text
   label: Intro Name
   config:
     required: true
