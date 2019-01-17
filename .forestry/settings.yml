@@ -4,15 +4,15 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: jekyll-pages
+  label: Home
+  create: all
+  new_doc_ext: ".html"
 - type: directory
   path: ''
   label: Pages
   create: all
   match: _pages/*
-- type: jekyll-pages
-  label: Home
-  create: all
-  new_doc_ext: ".html"
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
