@@ -28,11 +28,11 @@ logo:
       <div class="grid-intro__circle">
         <div class="image">
           <picture data-aos="fade-right" data-aos-delay="900" data-aos-easing="ease-in-out" data-aos-duration="500">
-            <source media="(min-width: 1900px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920/fb3-lrg.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/fb3-lrg.jpg 2x">
-            <source media="(min-width: 1300px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-lrg.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920/fb3-lrg.jpg 2x">
-            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-lrg.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-lrg.jpg 2x">
-            <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-lrg.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-lrg.jpg 2x">
-            <img src="{{ page.featured_images.large | relative_url }}" alt="Final Bout 3 Image">
+            <source media="(min-width: 1900px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload{{ page.featured_images.large | relative_url }} 2x">
+            <source media="(min-width: 1300px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920{{ page.featured_images.large | relative_url }} 2x">
+            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ page.featured_images.large | relative_url }} 2x">
+            <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large | relative_url }} 2x">
+            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large | relative_url }}" alt="Final Bout 3 Image">
           </picture>
         </div> <!-- / .image -->
         <div class="corner" data-aos="fade-left" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="500">
