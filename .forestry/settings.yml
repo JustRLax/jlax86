@@ -6,11 +6,9 @@ webhook_url:
 sections:
 - type: directory
   path: ''
-  label: Drift Videos
+  label: Pages
   create: all
-  match: "**/*"
-  templates:
-  - grid
+  match: _PAGES
 - type: jekyll-pages
   label: Pages
   create: all
