@@ -35,9 +35,19 @@ drift_videos:
   - page_name: Miscellaneous
     page_url: "/misc"
 undefined: []
+featured_project:
+  title: Learn Drifting
+  description: Learn Drifting is a brand that strives to preserve the origins of stylish
+    drifting in Japan by providing a hub for education and a video series that encourages
+    using driving simulators to improve drift and driving techniques. In this project
+    I've been able to incorporate my love for driving, designing, coding, music and
+    video into a single project. Take a look at the driving video preview to see a
+    sneak peek of the video series.
+  video_poster: "/v1547689301/reel.gif"
+  video_url: assets/resources/reel.webm
 
 ---
-<div class="foreground ground">
+<img src="/v1547689301/reel.gif"><div class="foreground ground">
   <div class="about">
     <span id="about"></span>
     <div class="container">
@@ -89,8 +99,8 @@ undefined: []
             <div class="logo">
               {% svg ../../assets/resources/learn-drifting-logo.svg %}
             </div> <!-- / .logo -->
-            <h2>Learn Drifting</h2>
-            <p>Learn Drifting is a brand that strives to preserve the origins of stylish drifting in Japan by providing a hub for education and a video series that encourages using driving simulators to improve drift and driving techniques. In this project I've been able to incorporate my love for driving, designing, coding, music and video into a single project. Take a look at the driving video preview to see a sneak peek of the video series.</p>
+            <h2>{{ page.featured_project.title }}</h2>
+            {{ page.featured_project.title }}
           </div> <!-- / .col -->
           <div class="col">
             <div class="preview">
@@ -105,8 +115,8 @@ undefined: []
         </div> <!-- / .container -->
       </div> <!-- / __two-col -->
       <div class="video-bg">
-				<video autoplay playsinline muted loop preload="auto" class="video" poster="assets/resources/reel.gif">
-					<source src="assets/resources/reel.webm" type="video/webm"/>
+				<video autoplay playsinline muted loop preload="auto" class="video" poster="{{ page.featured_project.video_poster }}">
+					<source src="{{ page.featured_project.video_url }}" type="video/webm"/>
 				</video>
 			</div><!-- / video-bg -->
     </div> <!-- / __project -->
