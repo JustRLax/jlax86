@@ -45,6 +45,9 @@ featured_project:
     sneak peek of the video series.
   video_poster: "/v1547689301/reel.gif"
   video_url: assets/resources/reel.webm
+  video_preview: "/v1547690058/ld-preview.gif"
+  youtube_url: https://www.youtube.com/watch?v=mVJaldXCs-w
+  video_preview_text: Driving Video Preview
 
 ---
 <img src="/v1547689301/reel.gif"><div class="foreground ground">
@@ -105,9 +108,9 @@ featured_project:
           <div class="col">
             <div class="preview">
               <figure>
-                <img src="{{ site.cloudinary_url | append: "ld-preview.gif"}}" alt="Learn Drifting Preview">
+                <img src="{{ page.featured_project.video_preview }}" alt="{{ page.featured_project.title }}<img src="/v1547690058/ld-preview.gif"> Preview">
                 <div class="preview__info">
-                  <a href="https://www.youtube.com/watch?v=mVJaldXCs-w" class="preview__link play">{% svg ../../assets/resources/play.svg %} <span>Driving Video Preview</span></a>
+                  <a href="{{ page.featured_project.youtube_url }}" class="preview__link play">{% svg ../../assets/resources/play.svg %} <span>{{ page.featured_project.video_preview_text }}</span></a>
                 </div> <!-- / __info -->
               </figure>
             </div> <!-- / .preview -->
