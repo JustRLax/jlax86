@@ -24,3 +24,5 @@ fields:
     schema:
       format: html-blocks
     required: false
+pages:
+- _pages/jam.html
