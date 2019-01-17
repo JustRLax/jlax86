@@ -64,5 +64,18 @@ fields:
       label: Page URL
       default: ''
 - type: field_group_list
+  label: Featured Project
+  name: featured_project
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: textarea
+    config:
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Description
+    name: description
 pages:
 - index.html
