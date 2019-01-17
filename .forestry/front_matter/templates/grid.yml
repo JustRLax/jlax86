@@ -4,6 +4,16 @@ hide_body: false
 is_partial: false
 fields:
 - type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: permalink
+  label: Permalink
+  config:
+    required: true
+- type: text
   label: Name
   name: name
 - type: textarea
