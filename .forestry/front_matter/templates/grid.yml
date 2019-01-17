@@ -24,6 +24,10 @@ fields:
     schema:
       format: html-blocks
     required: false
+- type: file
+  name: large_featured
+  label: Large Featured
+  description: 1500x1500
 pages:
 - _pages/fb3.html
 - _pages/jam.html
