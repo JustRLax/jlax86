@@ -25,4 +25,5 @@ fields:
       format: html-blocks
     required: false
 pages:
+- _pages/fb3.html
 - _pages/jam.html
