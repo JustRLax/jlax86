@@ -80,8 +80,20 @@ fields:
   - type: file
     name: video_poster
     label: Video Poster
+    description: Background Video
   - type: text
     name: video_url
     label: Video URL
+    description: For Background Video
+  - type: file
+    label: Video Preview
+    name: video_preview
+  - type: text
+    name: youtube_url
+    label: Youtube URL
+  - type: text
+    name: video_preview_text
+    label: Video Preview Text
+    description: Hover Text
 pages:
 - index.html
