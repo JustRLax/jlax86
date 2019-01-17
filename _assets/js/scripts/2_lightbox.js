@@ -96,6 +96,20 @@ $('.fight-modal').magnificPopup({
     type: 'image' // this is a default type
 });
 
+$('.cat-modal').magnificPopup({
+    removalDelay: 700,
+    items: [
+      {
+        src: $('<div class="image-container sm"><img src="https://res.cloudinary.com/justinlaxamana/fiona.jpg" alt="Fiona"/><p>Fiona</p></div>'),
+        type: 'inline'
+      }
+    ],
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is a default type
+});
+
 $('.touch .grid-section__item .image').on("click", function(e){
   $(this).toggleClass('active');
   e.preventDefault();

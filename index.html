@@ -51,7 +51,7 @@ featured_project:
     preview to see a sneak peek of the video series.</p>"
 
 ---
-<img src="/v1547689301/reel.gif"><div class="foreground ground">
+<div class="foreground ground">
   <div class="about">
     <span id="about"></span>
     <div class="container">
@@ -91,7 +91,7 @@ featured_project:
           <ul>
             {% for dropdown in page.drift_videos.dropdown %}
             <li><a href="{{ dropdown.page_url }}">{{ dropdown.page_name }}</a></li>
-            {% endfor %} 
+            {% endfor %}
           </ul>
         </div> <!-- / .list-dropdown -->
       </section> <!-- / __block -->
@@ -126,10 +126,3 @@ featured_project:
     </div> <!-- / __project -->
   </div> <!-- / .projects -->
 </div> <!-- / .foreground -->
-
-<div id="cat" class="mfp-hide">
-  <div class="image-modal">
-    <img src="{{ site.cloudinary_url | append: "fiona.jpg"}}" alt="Fiona Cat">
-    <p class="caption">Fiona</p>
-  </div> <!-- / .image-modal -->
-</div> <!-- / .mfp-hide -->
