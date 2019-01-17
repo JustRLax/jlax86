@@ -14,7 +14,7 @@ fields:
   config:
     required: true
 - type: text
-  label: Name
+  label: Page Name
   name: pagename
 - type: textarea
   name: description
