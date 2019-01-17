@@ -71,8 +71,8 @@ fields:
     name: title
     label: Title
   - type: textarea
-    name: description
-    label: Description
+    name: project_description
+    label: Project Description
     config:
       wysiwyg: true
       schema:
