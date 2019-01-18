@@ -7,13 +7,6 @@ sections:
 - type: document
   path: _config.yml
   label: Global Settings
-- type: directory
-  path: _includes
-  label: Global Includes
-  create: all
-  match: "**/*"
-  exclude: ".gitkeep"
-  new_doc_ext: html
 - type: document
   path: index.html
   label: Homepage
