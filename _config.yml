@@ -23,4 +23,17 @@ header:
   - template: navlink
     text: Homer
     url: "/"
+  link:
+  - title: Home
+    url: "/"
+  - title: Client Work
+    url: "/projects"
+  dropdown:
+  - title: Drift Videos
+    sublink:
+    - title: Miscellaneous
+      url: "/misc"
+  button:
+  - title: Contact
+    url: "/contact"
 footer: {}
