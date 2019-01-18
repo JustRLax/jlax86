@@ -24,7 +24,7 @@ header:
     text: Homer
     url: "/"
   link:
-  - title: Home1
+  - title: Home
     url: "/"
   - title: Client Work
     url: "#"

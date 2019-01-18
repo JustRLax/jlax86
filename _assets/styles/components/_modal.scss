@@ -1,4 +1,4 @@
-//Modals
+//Image Modals
 .image-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -18,47 +18,8 @@
     @include a-link;
   }
 }
-.image-modal {
-  padding: 40px;
-  max-width: 500px;
-  margin: 0 auto;
-  video {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-  }
-}
-.caption {
-  @include p();
-  width: 100%;
-  padding: 0 5px;
-  line-height: 1.4;
-  color: $white;
-  margin-top: 10px;
-}
-#contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contact-me {
-  a {
-    display: block;
-    background: $white;
-    padding: 20px;
-    font-family: $oswald;
-    font-size: 1.25em;
-    color: $red;
-    text-decoration: none;
-    transition: $dt;
-    border-radius: 6px;
-    &:hover {
-      color: $white;
-      background: $red;
-    }
-  }
-}
 
+//Alert
 .alert-container {
   max-width: 440px;
   background: rgba(0,0,0,.6);
