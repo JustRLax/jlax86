@@ -24,7 +24,7 @@ header:
     text: Homer
     url: "/"
   link:
-  - title: Home
+  - title: Home1
     url: "/"
   - title: Client Work
     url: "#"
@@ -54,3 +54,4 @@ footer:
   dribbble: https://dribbble.com/jlax86
   codepen: https://codepen.io/jlax86/
   details: "© Copyright 2019. All Rights Reserved. Justin Laxamana"
+sitebase: https://www.jlax86.com
