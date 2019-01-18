@@ -15,4 +15,3 @@ fields:
   label: Footer
 pages:
 - _config.yml
-- _includes/header.html
