@@ -15,17 +15,17 @@ layout: default
       <div class="grid-intro__circle">
         <div class="image">
           <picture data-aos="fade-right" data-aos-delay="900" data-aos-easing="ease-in-out" data-aos-duration="500">
-            <source media="(min-width: 1900px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload{{ page.featured_images.large | relative_url }} 2x">
-            <source media="(min-width: 1300px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920{{ page.featured_images.large | relative_url }} 2x">
-            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ page.featured_images.large | relative_url }} 2x">
-            <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ page.featured_images.large | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large | relative_url }} 2x">
-            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large | relative_url }}" alt="Final Bout 3 Image">
+            <source media="(min-width: 1900px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920{{ page.featured_images.large}}, https://res.cloudinary.com/justinlaxamana/image/upload{{ page.featured_images.large}} 2x">
+            <source media="(min-width: 1300px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ page.featured_images.large}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1920{{ page.featured_images.large}} 2x">
+            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ page.featured_images.large}} 2x">
+            <source media="(min-width: 200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ page.featured_images.large}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large}} 2x">
+            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.large}}" alt="Final Bout 3 Image">
           </picture>
         </div> <!-- / .image -->
         <div class="corner" data-aos="fade-left" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="500">
           <picture>
-            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ page.featured_images.small | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.small | relative_url }} 2x">
-            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.small | relative_url }}" alt="Final Bout 3 Image">
+            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ page.featured_images.small}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.small}} 2x">
+            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.small}}" alt="Final Bout 3 Image">
           </picture>
         </div> <!-- / .corner -->
       </div> <!-- / __circle -->
@@ -45,9 +45,9 @@ layout: default
           {% endif %}
           <div class="image">
             <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }} 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}" alt="{{ page.the_name }} Image">
+              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail}} 2x">
+              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail}} 2x">
+              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail}}" alt="{{ page.the_name }} Image">
             </picture>
             <div class="image__contents">
               <a href="{{ video.youtube }}" class="play">
@@ -63,10 +63,16 @@ layout: default
 		{% endif %}
         {% endfor %}
 
-        <a href="{{ page.logo.url}}" target="_blank" class="logo">
-          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="Final Bout 3 Logo">
 
+        {% if page.logo.url %}
+        <a href="{{ page.logo.url}}" target="_blank" class="logo">
+          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
         </a>
+        {% else %}
+        <span class="logo">
+          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
+        </span>
+        {% endif %}
       </div> <!-- / __header -->
       <div class="grid-section__grid">
 
@@ -78,9 +84,9 @@ layout: default
           {% endif %}
           <div class="image">
             <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }} 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}" alt="{{ page.the_title }} Image">
+              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail}} 2x">
+              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail}}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail}} 2x">
+              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail}}" alt="{{ page.the_title }} Image">
             </picture>
             <div class="image__contents">
               <a href="{{ video.youtube }}" class="play">
