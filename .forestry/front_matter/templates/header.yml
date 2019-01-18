@@ -10,6 +10,7 @@ fields:
   - type: textarea
     name: ''
     label: SVG Logo
+    default: "{% svg ../../assets/resources/logo-small.svg %}"
   - type: field_group_list
     label: Navigation
     name: navigation
