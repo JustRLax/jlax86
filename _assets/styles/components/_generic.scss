@@ -1,0 +1,39 @@
+//Generic
+.generic {
+  min-height: 100vh;
+  padding: 180px 0 80px;
+  width: 100%;
+  background: linear-gradient(-45deg, RGBA(74, 78, 115, 1.00) 0%, RGBA(212, 87, 89, 1.00) 90%);
+  position: relative;
+  z-index: 100;
+  .container {
+    position: relative;
+    z-index: 10;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  h1 {
+    @include h2(20px);
+    padding-bottom: 20px;
+    border-bottom: 1px solid $white;
+  }
+  p {
+    @include p();
+  }
+  .image {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100px;
+  }
+  .button {
+    margin: 0 10px 20px;
+    &:hover {
+      background: $white;
+      color: $red;
+    }
+  }
+}
