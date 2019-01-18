@@ -22,6 +22,9 @@ fields:
   name: client_work
   label: Client Work
   fields:
+  - type: file
+    name: background
+    label: Background
   - type: text
     name: intro
     label: Intro
@@ -42,6 +45,9 @@ fields:
   name: drift_videos
   label: Drift Videos
   fields:
+  - type: file
+    name: background
+    label: Background
   - type: text
     name: title
     label: Title
