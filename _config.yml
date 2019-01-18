@@ -18,4 +18,9 @@ plugins:
 - jekyll-inline-svg
 header:
   test: Home
+  '': "{% svg ../../assets/resources/logo-small.svg %}"
+  navigation:
+  - template: navlink
+    text: Homer
+    url: "/"
 footer: {}
