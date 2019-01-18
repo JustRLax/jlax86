@@ -62,6 +62,7 @@ fields:
       name: coming_soon
       label: Coming Soon
       description: Unreleased and Unclickable
+      default: true
     - type: text
       name: youtube
       label: Youtube
