@@ -32,7 +32,7 @@ header:
   - title: Drift Videos
     sublink:
     - title: Final Bout 3
-      url: _pages/fb3.html
+      url: "/fb3"
     - title: Super D Matsuri 2018
       url: _pages/masturi.html
     - title: Club FR Jam 2018
