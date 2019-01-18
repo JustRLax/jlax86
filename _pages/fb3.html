@@ -19,11 +19,11 @@ videos:
     coming_soon: true
     youtube: _
     download: _
-  - thumbnail: "/v1546646944/fb3-7.jpg"
+  - name: FB7
+    thumbnail: "/v1546646944/fb3-7.jpg"
     coming_soon: true
     youtube: _
     download: _
-    name: FB7
 
 ---
 <div class="grid">
@@ -61,7 +61,7 @@ videos:
     <div class="container">
       <div class="grid-section__header">
         <h2>Videos</h2>
-        
+
         {% for video in page.videos %}
         {% if video.is_featured %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">
@@ -84,19 +84,18 @@ videos:
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
-        
+
 		{% endif %}
         {% endfor %}
-        
+
         <a href="{{ page.logo.url}}" target="_blank" class="logo">
           <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="Final Bout 3 Logo">
-          
+
         </a>
       </div> <!-- / __header -->
       <div class="grid-section__grid">
-        
+
         {% for video in page.videos %}
-        {% if video.is_featured %}{% else %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
           {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
@@ -117,9 +116,8 @@ videos:
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
-        {% endif %}
         {% endfor %}
-        
+
       </div> <!-- / __grid -->
     </div> <!-- / .container -->
   </div> <!-- / .grid-section -->
