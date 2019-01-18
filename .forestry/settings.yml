@@ -9,7 +9,7 @@ sections:
   label: Global
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
 - type: jekyll-pages
   label: Home
   create: all
