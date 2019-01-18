@@ -71,7 +71,7 @@ layout: default
       <div class="grid-section__grid">
 
         {% for video in page.videos.video %}
-        {% if video.is_featured %}{% else %}
+        {% unless video.is_featured %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
           {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
@@ -92,7 +92,7 @@ layout: default
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
-        {% endif %}
+        {% endunless %}
         {% endfor %}
 
       </div> <!-- / __grid -->
