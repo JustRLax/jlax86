@@ -9,6 +9,7 @@ sections:
   label: Global
   create: all
   match: "**/*"
+  exclude: ".gitkeep"
   new_doc_ext: html
 - type: jekyll-pages
   label: Home
@@ -19,6 +20,7 @@ sections:
   label: Pages
   create: documents
   match: "**/*"
+  exclude: index.md
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
