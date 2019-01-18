@@ -10,7 +10,7 @@ sections:
   match: "**/*"
 - type: directory
   path: _includes
-  label: Global
+  label: Global Includes
   create: all
   match: "**/*"
   exclude: ".gitkeep"
