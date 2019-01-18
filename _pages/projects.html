@@ -1,0 +1,37 @@
+---
+title: Projects
+permalink: /dc5dc2ek9s13s14s15ae86/
+layout: projects
+---
+
+<div class="client-work">
+  <div class="container">
+    <div class="client-work__personal">
+      {% for featured_project in page.featured_project %}
+      <div class="item">
+        <section class="project__content">
+          <p class="lrg">{{ featured_project.title }} <span class="tag">{{ featured_project.industry }}</span></p>
+          <p>{{ featured_project.details }}</p>
+        </section>
+        <a target="_blank" href="{{ featured_project.url }}" class="special button"><span>{{ featured_project.button }}</span></a>
+      </div> <!-- / .item -->
+      {% endfor %}
+
+    </div> <!-- / __personal -->
+    <h1>{{ page.heading }}</h1>
+    <div class="client-work__projects">
+
+      {% for project in page.project %}
+      <div class="project">
+        <section class="project__content">
+          <h2>{{ project.title }} <span class="tag">{{ project.industry }}</span></h2>
+          <p>{{ project.details }}</p>
+        </section>
+        <a target="_blank" href="{{ project.url }}" class="button">View</a>
+      </div> <!-- / .project -->
+      {% endfor %}
+
+    </div> <!-- / __projects -->
+  </div> <!-- / .container -->
+  <span class="waypoint" data-aos="fade"></span>
+</div> <!-- / client-work -->
