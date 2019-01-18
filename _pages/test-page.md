@@ -40,6 +40,5 @@ page_content:
       coming_soon: true
       name: Animal Style Al
 date: 2019-01-18 04:07:25 +0000
-published: false
 
 ---
