@@ -13,6 +13,9 @@ fields:
   name: permalink
   label: Permalink
 - type: file
+  name: background
+  label: Background
+- type: file
   name: image
   label: Image
   description: 600x860
