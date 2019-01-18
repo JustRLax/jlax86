@@ -1,0 +1,19 @@
+---
+label: Dropdown
+hide_body: false
+is_partial: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- type: field_group_list
+  name: sublink
+  label: Sublink
+  fields:
+  - type: text
+    label: Title
+    name: title
+  - type: text
+    name: url
+    label: URL
