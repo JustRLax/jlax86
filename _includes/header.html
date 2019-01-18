@@ -3,7 +3,7 @@
   <nav>
     <ul>
       {% for link in site.header.link %}
-      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      <li><a {% unless link.alert = '' %} class="alert" {% unless %} href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
       {% for dropdown in site.header.dropdown %}
       <li>
