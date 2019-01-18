@@ -82,4 +82,8 @@ fields:
       description: Download URL
 pages:
 - _pages/rio.html
+- _pages/misc.html
+- _pages/mwt.html
 - _pages/fb3.html
+- _pages/jam.html
+- _pages/masturi.html
