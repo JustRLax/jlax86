@@ -10,8 +10,8 @@ featured_images:
   large: "/v1544831099/fb3-lrg.jpg"
   small: "/v1544831322/fb3-sm.jpg"
 logo:
-  image: ''
-  url: ''
+  image: "/v1543967765/finalbout-logo.png"
+  url: http://final-bout.com/
 
 ---
 <div class="grid">
@@ -66,8 +66,8 @@ logo:
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
-        <a href="http://final-bout.com/" target="_blank" class="logo">
-          <img src="{{ site.cloudinary_url | append: "finalbout-logo.png"}}" alt="Final Bout 3 Logo">
+        <a href="{{ page.logo.image}}" target="_blank" class="logo">
+          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="Final Bout 3 Logo">
         </a>
       </div> <!-- / __header -->
       <div class="grid-section__grid">
