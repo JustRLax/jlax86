@@ -3,5 +3,3 @@ label: Blank
 hide_body: false
 is_partial: false
 fields: []
-pages:
-- _includes/header.html
