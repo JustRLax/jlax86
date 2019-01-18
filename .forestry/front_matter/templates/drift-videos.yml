@@ -3,6 +3,15 @@ label: Drift Videos
 hide_body: false
 is_partial: false
 fields:
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - drift-videos
+  label: layout
+  name: layout
+  default: drift-videos
 - type: text
   name: title
   label: Title
