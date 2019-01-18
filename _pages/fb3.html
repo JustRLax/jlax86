@@ -81,10 +81,10 @@ videos:
         
         <a href="{{ page.logo.url}}" target="_blank" class="logo">
           <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="Final Bout 3 Logo">
+          
         </a>
       </div> <!-- / __header -->
       <div class="grid-section__grid">
-        
         
         {% for video in page.videos %}
         {{ if video.is_featured }}{{ else }}
@@ -96,7 +96,7 @@ videos:
             <picture>
               <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
               <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }} 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}" alt="Final Bout 3 Image">
+              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}" alt="{{ page.the_title }} Image">
             </picture>
             <div class="image__contents">
               <a href="{{ video.youtube }}" class="play">
@@ -111,15 +111,9 @@ videos:
         {{ end }}
         {% endfor %}
         
-
-
-
-
       </div> <!-- / __grid -->
     </div> <!-- / .container -->
   </div> <!-- / .grid-section -->
-
-
   <span class="grid__bg1 grid__bg"></span>
   <span class="grid__bg2 grid__bg"></span>
   <span class="waypoint" data-aos="fade"></span>
