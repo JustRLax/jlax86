@@ -64,14 +64,14 @@ layout: default
         {% endfor %}
 
 
-        {% if page.logo.url %}
-        <a href="{{ page.logo.url}}" target="_blank" class="logo">
-          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
-        </a>
-        {% else %}
+        {% if page.logo.url == '' %}
         <span class="logo">
           <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
         </span>
+        {% else %}
+        <a href="{{ page.logo.url}}" target="_blank" class="logo">
+          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
+        </a>
         {% endif %}
       </div> <!-- / __header -->
       <div class="grid-section__grid">
