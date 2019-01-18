@@ -17,6 +17,10 @@ fields:
     - type: text
       name: url
       label: URL
+    - type: boolean
+      name: alert
+      label: Alert
+      description: Open Alert Modal
   - type: field_group_list
     name: dropdown
     label: Dropdown
