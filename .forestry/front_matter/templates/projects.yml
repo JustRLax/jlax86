@@ -32,6 +32,9 @@ fields:
     name: details
     label: Details
   - type: text
+    name: button
+    label: Button
+  - type: text
     name: url
     label: URL
 - type: field_group_list
@@ -47,9 +50,6 @@ fields:
   - type: textarea
     name: description
     label: Description
-  - type: text
-    name: button
-    label: Button
   - type: text
     name: url
     label: URL
