@@ -1,0 +1,25 @@
+---
+label: Contact
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: permalink
+  label: Permalink
+- type: text
+  label: Title
+  name: title
+- type: text
+  name: permalink
+  label: Permalink
+- type: file
+  name: image
+  label: Image
+  description: 600x860
+- type: textarea
+  name: description
+  label: Description
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
