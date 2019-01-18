@@ -1,24 +1,24 @@
 <header class="main-header">
-  <a href="/" class="logo">{% svg ../../assets/resources/logo-small.svg %}</a>
+  <a href="{{ site.sitebase }}/" class="logo">{% svg ../../assets/resources/logo-small.svg %}</a>
   <nav>
     <ul>
       {% for link in site.header.link %}
       <li><a {% if link.alert == true %} class="alert" {% endif %}
- href="{{ link.url }}">{{ link.title }}</a></li>
+ href="{{ site.sitebase }}{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
       {% for dropdown in site.header.dropdown %}
       <li>
         <a class="with-dropdown" href="#">{{ dropdown.title }}</a>
         <ul class="dropdown">
           {% for sublink in dropdown.sublink %}
-          <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
+          <li><a href="{{ site.sitebase }}{{ sublink.url }}">{{ sublink.title }}</a></li>
           {% endfor %}
         </ul>
       </li>
       {% endfor %}
     </ul>
     {% for button in site.header.button %}
-    <a href="{{ button.url }}" class="button">{{ button.title }}</a>
+    <a href="{{ site.sitebase }}{{ button.url }}" class="button">{{ button.title }}</a>
     {% endfor %}
   </nav>
 </header>
