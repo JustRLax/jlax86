@@ -47,6 +47,9 @@ fields:
     name: video
     label: Video
     fields:
+    - type: text
+      name: name
+      label: Name
     - type: file
       name: thumbnail
       label: Thumbnail
