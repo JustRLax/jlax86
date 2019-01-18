@@ -74,5 +74,9 @@ fields:
   - type: text
     name: codepen
     label: Codepen
+  - type: textarea
+    label: Details
+    name: details
+    description: Legal Info
 pages:
 - _config.yml
