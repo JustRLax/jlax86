@@ -12,6 +12,9 @@ featured_images:
 logo:
   image: "/v1543967765/finalbout-logo.png"
   url: "#"
+videos:
+  video:
+  - {}
 
 ---
 <div class="grid">
@@ -49,31 +52,46 @@ logo:
     <div class="container">
       <div class="grid-section__header">
         <h2>Videos</h2>
+        
+        {% for video in page.videos %}
+        {{ if video.is_featured }}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">
+          {{ if video.coming_soon }}
+          <div class="soon"><span>Coming Soon</span></div>
+          {{ end }}
           <div class="image">
             <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-1.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-1.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-1.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-1.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-1.jpg" alt="Final Bout 3 Image">
+              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
+              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }} 2x">
+              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}" alt="{{ page.the_name }} Image">
             </picture>
             <div class="image__contents">
-              <a href="https://www.youtube.com/watch?v=5e-tbXg5rPM" class="play">
+              <a href="{{ video.youtube }}" class="play">
                 {% svg ../../assets/resources/play.svg %}
               </a>
-              <a href="https://www.dropbox.com/s/rb3k26d5rg6dcqx/fb3-1.mp4?dl=1" class="download">
+              <a href="{{ video.download }}" class="download">
                 {% svg ../../assets/resources/download.svg %}
               </a>
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
+        
+		{{ end }}
+        {% endfor %}
+        
         <a href="{{ page.logo.url}}" target="_blank" class="logo">
           <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="Final Bout 3 Logo">
         </a>
       </div> <!-- / __header -->
       <div class="grid-section__grid">
-
+        
+        
+        {% for video in page.videos %}
+        {{ if video.is_featured }}{{ else }}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
+          {{ if video.coming_soon }}
           <div class="soon"><span>Coming Soon</span></div>
+          {{ end }}
           <div class="image">
             <picture>
               <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-2.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-2.jpg 2x">
@@ -81,111 +99,18 @@ logo:
               <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-2.jpg" alt="Final Bout 3 Image">
             </picture>
             <div class="image__contents">
-              <a href="#" class="play">
+              <a href="{{ video.youtube }}" class="play">
                 {% svg ../../assets/resources/play.svg %}
               </a>
-              <a href="https://dl.getdropbox.com/s/on5w1a84j6o949c/Banger-1.mp4?dl=1" class="download">
+              <a href="{{ video.download }}" class="download">
                 {% svg ../../assets/resources/download.svg %}
               </a>
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
-
-        <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="soon"><span>Coming Soon</span></div>
-          <div class="image">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-3.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-3.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-3.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-3.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-3.jpg" alt="Final Bout 3 Image">
-            </picture>
-            <div class="image__contents">
-              <a href="____________" class="play">
-                {% svg ../../assets/resources/play.svg %}
-              </a>
-              <a href="____________" class="download">
-                {% svg ../../assets/resources/download.svg %}
-              </a>
-            </div> <!-- / __contents -->
-          </div> <!-- / .image -->
-        </div> <!-- / __item -->
-
-        <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="soon"><span>Coming Soon</span></div>
-          <div class="image">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-4.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-4.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-4.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-4.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-4.jpg" alt="Final Bout 3 Image">
-            </picture>
-            <div class="image__contents">
-              <a href="____________" class="play">
-                {% svg ../../assets/resources/play.svg %}
-              </a>
-              <a href="____________" class="download">
-                {% svg ../../assets/resources/download.svg %}
-              </a>
-            </div> <!-- / __contents -->
-          </div> <!-- / .image -->
-        </div> <!-- / __item -->
-
-        <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="soon"><span>Coming Soon</span></div>
-          <div class="image">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-5.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-5.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-5.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-5.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-5.jpg" alt="Final Bout 3 Image">
-            </picture>
-            <div class="image__contents">
-              <a href="____________" class="play">
-                {% svg ../../assets/resources/play.svg %}
-              </a>
-              <a href="____________" class="download">
-                {% svg ../../assets/resources/download.svg %}
-              </a>
-            </div> <!-- / __contents -->
-          </div> <!-- / .image -->
-        </div> <!-- / __item -->
-
-        <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="soon"><span>Coming Soon</span></div>
-          <div class="image">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-6.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-6.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-6.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-6.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-6.jpg" alt="Final Bout 3 Image">
-            </picture>
-            <div class="image__contents">
-              <a href="____________" class="play">
-                {% svg ../../assets/resources/play.svg %}
-              </a>
-              <a href="____________" class="download">
-                {% svg ../../assets/resources/download.svg %}
-              </a>
-            </div> <!-- / __contents -->
-          </div> <!-- / .image -->
-        </div> <!-- / __item -->
-
-
-        <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="soon"><span>Coming Soon</span></div>
-          <div class="image">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-7.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-7.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-7.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-7.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-7.jpg" alt="Final Bout 3 Image">
-            </picture>
-            <div class="image__contents">
-              <a href="____________" class="play">
-                {% svg ../../assets/resources/play.svg %}
-              </a>
-              <a href="____________" class="download">
-                {% svg ../../assets/resources/download.svg %}
-              </a>
-            </div> <!-- / __contents -->
-          </div> <!-- / .image -->
-        </div> <!-- / __item -->
+        {{ end }}
+        {% endfor %}
+        
 
 
 
