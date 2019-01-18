@@ -34,16 +34,16 @@ header:
     - title: Final Bout 3
       url: "/fb3"
     - title: Super D Matsuri 2018
-      url: _pages/masturi.html
+      url: "/masturi"
     - title: Club FR Jam 2018
-      url: _pages/jam.html
+      url: "/jam"
     - title: Super D Midwest Trial
-      url: _pages/mwt.html
+      url: "/mwt"
     - title: Rio Bash
-      url: _pages/rio.html
+      url: "/rio"
     - title: Miscellaneous
-      url: _pages/misc.html
+      url: "/misc"
   button:
   - title: Contact
-    url: _pages/contact.html
+    url: "/contact"
 footer: {}
