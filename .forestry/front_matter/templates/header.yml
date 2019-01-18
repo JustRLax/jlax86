@@ -11,13 +11,47 @@ fields:
     name: ''
     label: SVG Logo
     default: "{% svg ../../assets/resources/logo-small.svg %}"
-  - type: blocks
-    name: navigation
-    label: Navigation
-    template_types:
-    - navlink
-    - dropdown
-    - button
+  - type: field_group_list
+    name: link
+    label: Link
+    fields:
+    - type: text
+      name: title
+      label: Title
+    - type: text
+      name: url
+      label: URL
+  - type: field_group_list
+    name: dropdown
+    label: Dropdown
+    fields:
+    - type: text
+      name: title
+      label: Title
+    - type: field_group_list
+      label: Sublink
+      name: sublink
+      fields:
+      - type: text
+        name: title
+        label: Title
+      - type: text
+        name: url
+        label: URL
+    config:
+      max: '1'
+  - type: field_group_list
+    config:
+      max: '1'
+    label: Button
+    name: button
+    fields:
+    - type: text
+      name: title
+      label: Title
+    - type: text
+      name: url
+      label: URL
 - type: field_group
   name: footer
   label: Footer
