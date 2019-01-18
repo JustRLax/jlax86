@@ -90,6 +90,22 @@
       font-size: .875em;
       line-height: 1.6;
     }
+    .lock {
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 10px;
+      bottom: 100px;
+      transition: $dt;
+      opacity: .6;
+      .a-lock {
+        fill: #fff;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
   .social {
     margin-bottom: 10px;

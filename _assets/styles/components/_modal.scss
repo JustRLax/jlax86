@@ -1,4 +1,4 @@
-//Modal
+//Modals
 .image-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -55,6 +55,31 @@
     &:hover {
       color: $white;
       background: $red;
+    }
+  }
+}
+
+.alert-container {
+  max-width: 440px;
+  background: rgba(0,0,0,.6);
+  padding: 20px;
+  margin: 0 auto;
+  color: $white;
+  text-align: center;
+  h2 {
+    @include h2(10px);
+    width: 100%;
+  }
+  p {
+    @include p();
+    width: 100%;
+  }
+  .button {
+    transition: $dt;
+    margin: 0 10px 10px;
+    &:hover {
+      background: $white;
+      color: $red;
     }
   }
 }

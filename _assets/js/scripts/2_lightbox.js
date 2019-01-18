@@ -109,6 +109,20 @@ if ($('.scene').length) {
 });
 }
 
+$('.alert').magnificPopup({
+  removalDelay: 700,
+  fixedContentPos: true,
+  fixedBgPos: true,
+  showCloseBtn: true,
+  closeOnBgClick: true,
+  enableEscapeKey: true,
+  items: [
+    {
+      src: $('<div class="alert-container"><h2>Hold Up!</h2><p>You need a username and password to visit this page. Would you like to proceed?</p><a href="https://projects.jlax86.com" class="button">Yes</a> <a href="#" class="mfp-close button">No</a></div>'),
+      type: 'inline'
+    }
+  ]
+});
 //Mobile Hover For Preview
 $('.touch .grid-section__item .image').on("click", function(e){
   $(this).toggleClass('active');
