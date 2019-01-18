@@ -114,6 +114,7 @@ videos:
       <div class="grid-section__grid">
 
         {% for video in page.videos.video %}
+        {% if video.is_featured %}{% else %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
           {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
@@ -134,6 +135,7 @@ videos:
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
+        {% endif %}
         {% endfor %}
 
       </div> <!-- / __grid -->
