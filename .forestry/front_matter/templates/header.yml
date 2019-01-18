@@ -59,6 +59,7 @@ fields:
   - type: text
     name: svg_logo
     label: SVG Logo
+    default: "{% svg ../../assets/resources/jlax-logo-small.svg %}"
   - type: text
     name: email
     label: Email
