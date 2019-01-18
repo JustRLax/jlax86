@@ -7,9 +7,20 @@ fields:
   name: header
   label: Header
   fields:
-  - type: text
-    name: test
-    label: Test
+  - type: textarea
+    name: ''
+    label: SVG Logo
+  - type: field_group_list
+    label: Navigation
+    name: navigation
+    fields:
+    - type: blocks
+      template_types:
+      - button
+      - dropdown
+      - navlink
+      label: Item
+      name: item
 - type: field_group
   name: footer
   label: Footer
