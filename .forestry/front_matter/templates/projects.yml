@@ -48,8 +48,8 @@ fields:
     name: industry
     label: Industry
   - type: textarea
-    name: description
-    label: Description
+    name: details
+    label: Details
   - type: text
     name: url
     label: URL
