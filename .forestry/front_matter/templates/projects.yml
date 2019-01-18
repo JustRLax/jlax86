@@ -1,0 +1,21 @@
+---
+label: Projects
+hide_body: false
+is_partial: false
+fields:
+- type: field_group_list
+  name: featured_project
+  label: Featured Project
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: text
+    name: industry
+    label: Industry
+  - type: textarea
+    name: details
+    label: Details
+  - type: text
+    name: url
+    label: URL
