@@ -6,3 +6,5 @@ fields:
 - type: text
   name: navlink
   label: Navlink
+pages:
+- _includes/header.html
