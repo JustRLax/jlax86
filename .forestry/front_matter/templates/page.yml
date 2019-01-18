@@ -20,3 +20,5 @@ fields:
   label: Page Content
   template_types:
   - drift-videos
+pages:
+- _pages/test-page.md
