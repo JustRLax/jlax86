@@ -48,13 +48,30 @@
         </div> <!-- / __icon -->
         <div class="info__details">
           <ul class="social">
-            <li><a href="mailto:hello@jlax86.com" alt="email">{% svg ../../assets/resources/email.svg %}</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/justrlax/" alt="linkedin">{% svg ../../assets/resources/linkedin.svg %}</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/jlax86/" alt="instagram">{% svg ../../assets/resources/instagram.svg %}</a></li>
-            <li><a target="_blank" href="https://dribbble.com/jlax86" alt="dribbble">{% svg ../../assets/resources/dribbble.svg %}</a></li>
-            <li><a target="_blank" href="https://codepen.io/jlax86/" alt="codepen">{% svg ../../assets/resources/codepen.svg %}</a></li>
+
+            {% unless site.footer.email == '' %}
+            <li><a href="{{site.footer.email}}" alt="email">{% svg ../../assets/resources/email.svg %}</a></li>
+            {% endunless %}
+
+            {% unless site.footer.linkedin == '' %}
+            <li><a target="_blank" href="{{site.footer.linkedin}}" alt="linkedin">{% svg ../../assets/resources/linkedin.svg %}</a></li>
+            {% endunless %}
+
+            {% unless site.footer.instagram == '' %}
+            <li><a target="_blank" href="{{site.footer.instagram}}" alt="instagram">{% svg ../../assets/resources/instagram.svg %}</a></li>
+            {% endunless %}
+
+            {% unless site.footer.dribbble == '' %}
+            <li><a target="_blank" href="{{site.footer.dribbble}}" alt="dribbble">{% svg ../../assets/resources/dribbble.svg %}</a></li>
+            {% endunless %}
+
+            {% unless site.footer.codepen == '' %}
+            <li><a target="_blank" href="{{site.footer.codepen}}" alt="codepen">{% svg ../../assets/resources/codepen.svg %}</a></li>
+            {% endunless %}
           </ul>
-          <p>© Copyright 2019. All Rights Reserved. Justin Laxamana</p>
+          {% unless site.footer.details == '' %}
+          <p>{{ site.footer.details }}</p>
+          {% endunless %}
         </div> <!-- / __details -->
       </footer> <!-- / .info -->
     </div> <!-- / __foreground -->
@@ -67,8 +84,3 @@
     </div> <!-- / __bird -->
   </div> <!-- / .scene -->
 </footer>
-<div id="contact" class="mfp-hide">
-  <div class="contact-me">
-    <a href="mailto:hello@jlax86.com">hello@jlax86.com</a>
-  </div> <!-- / .contact-me -->
-</div> <!-- / .mfp-hide -->
