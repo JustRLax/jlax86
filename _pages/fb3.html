@@ -62,7 +62,7 @@ videos:
       <div class="grid-section__header">
         <h2>Videos</h2>
 
-        {% for video in page.videos %}
+        {% for video in page.videos.video %}
         {% if video.is_featured %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">
           {% if video.coming_soon %}
@@ -95,7 +95,7 @@ videos:
       </div> <!-- / __header -->
       <div class="grid-section__grid">
 
-        {% for video in page.videos %}
+        {% for video in page.videos.video %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
           {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
