@@ -9,7 +9,7 @@
       <li>
         <a class="with-dropdown" href="#">{{ dropdown.title }}</a>
         <ul class="dropdown">
-          {% for sublink in site.header.dropdown.sublink %}
+          {% for sublink in dropdown.sublink %}
           <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
           {% endfor %}
         </ul>
