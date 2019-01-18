@@ -1,0 +1,22 @@
+---
+label: Page
+hide_body: false
+is_partial: false
+fields:
+- type: select
+  name: layout
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - default
+    - home
+    - drift-videos
+  label: Layout
+  default: default
+- type: blocks
+  name: page_content
+  label: Page Content
+  template_types:
+  - drift-videos
