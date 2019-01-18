@@ -35,8 +35,12 @@ fields:
       - type: text
         name: title
         label: Title
-      - type: text
+      - type: select
         name: url
+        config:
+          source:
+            type: pages
+            section: pages
         label: URL
     config:
       max: '1'
@@ -49,8 +53,12 @@ fields:
     - type: text
       name: title
       label: Title
-    - type: text
+    - type: select
       name: url
+      config:
+        source:
+          type: pages
+          section: pages
       label: URL
 - type: field_group
   name: footer
