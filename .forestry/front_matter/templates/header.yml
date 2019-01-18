@@ -75,5 +75,9 @@ fields:
     label: Details
     name: details
     description: Legal Info
+- type: text
+  name: sitebase
+  label: SiteBase
+  description: Explicit URL Projects Page
 pages:
 - _config.yml
