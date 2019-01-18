@@ -7,10 +7,6 @@ fields:
   name: header
   label: Header
   fields:
-  - type: textarea
-    name: ''
-    label: SVG Logo
-    default: "{% svg ../../assets/resources/logo-small.svg %}"
   - type: field_group_list
     name: link
     label: Link
@@ -56,9 +52,6 @@ fields:
   name: footer
   label: Footer
   fields:
-  - type: text
-    name: svg_logo
-    label: SVG Logo
   - type: text
     name: email
     label: Email
