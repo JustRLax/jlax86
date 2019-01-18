@@ -3,6 +3,21 @@ label: Projects
 hide_body: false
 is_partial: false
 fields:
+- type: select
+  name: layout
+  config:
+    source:
+      type: simple
+    options:
+    - nofollow
+  label: Layout
+  default: nofollow
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: permalink
+  label: Permalink
 - type: field_group_list
   name: featured_project
   label: Featured Project
@@ -16,6 +31,25 @@ fields:
   - type: textarea
     name: details
     label: Details
+  - type: text
+    name: url
+    label: URL
+- type: field_group_list
+  name: project
+  label: Project
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: text
+    name: industry
+    label: Industry
+  - type: textarea
+    name: description
+    label: Description
+  - type: text
+    name: button
+    label: Button
   - type: text
     name: url
     label: URL
