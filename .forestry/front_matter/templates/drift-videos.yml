@@ -1,8 +1,7 @@
 ---
 label: Drift Videos
 hide_body: false
-is_partial: true
-display_field: the_name
+is_partial: false
 fields:
 - type: text
   name: title
