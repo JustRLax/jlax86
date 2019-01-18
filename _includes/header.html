@@ -2,26 +2,23 @@
   <a href="/" class="logo">{% svg ../../assets/resources/logo-small.svg %}</a>
   <nav>
     <ul>
-  {% for navigation in site.header.navigation %}
-    {% when 'navlink' %}
-      <li><a href="{{ navigation.navlink.url }}">{{ navigation.navlink.title }}</a></li>
-    {% when 'dropdown' %}
-      <li><a href="/projects">Client Work</a></li>
+      {% for link in site.header.link %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+      {% for dropdown in site.header.dropdown %}
       <li>
-        <a class="with-dropdown" href="#">Drift Videos</a>
+        <a class="with-dropdown" href="#">{{ dropdown.title }}</a>
         <ul class="dropdown">
-          <li><a href="/fb3">Final Bout 3</a></li>
-          <li><a href="/matsuri">Super D Matsuri 2018</a></li>
-          <li><a href="/jam">Club FR Jam 2018</a></li>
-          <li><a href="/mwt">Super D Midwest Trial</a></li>
-          <li><a href="/rio">Rio Bash</a></li>
-          <li><a href="/misc">Miscellaneous</a></li>
+          {% for sublink in site.header.dropdown.sublink %}
+          <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
+          {% endfor %}
         </ul>
       </li>
-      {% endcase %}
-  {% endfor %}
+      {% endfor %}
     </ul>
-    <a href="/contact" class="button">Contact</a>
+    {% for button in site.header.button %}
+    <a href="{{ button.url }}" class="button">{{ button.title }}</a>
+    {% endfor %}
   </nav>
 </header>
 <main role="main">
