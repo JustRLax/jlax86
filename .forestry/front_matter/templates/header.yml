@@ -15,9 +15,9 @@ fields:
     name: navigation
     label: Navigation
     template_types:
-    - button
-    - dropdown
     - navlink
+    - dropdown
+    - button
 - type: field_group
   name: footer
   label: Footer
