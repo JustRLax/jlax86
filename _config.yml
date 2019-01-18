@@ -27,7 +27,8 @@ header:
   - title: Home
     url: "/"
   - title: Client Work
-    url: "/projects"
+    url: "#"
+    alert: true
   dropdown:
   - title: Drift Videos
     sublink:
