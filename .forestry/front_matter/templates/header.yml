@@ -11,17 +11,13 @@ fields:
     name: ''
     label: SVG Logo
     default: "{% svg ../../assets/resources/logo-small.svg %}"
-  - type: field_group_list
-    label: Navigation
+  - type: blocks
     name: navigation
-    fields:
-    - type: blocks
-      template_types:
-      - button
-      - dropdown
-      - navlink
-      label: Item
-      name: item
+    label: Navigation
+    template_types:
+    - button
+    - dropdown
+    - navlink
 - type: field_group
   name: footer
   label: Footer
