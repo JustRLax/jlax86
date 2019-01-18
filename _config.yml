@@ -15,4 +15,5 @@ permalink: /:title/
 cloudinary_url: "https://res.cloudinary.com/justinlaxamana/"
 plugins:
   - jekyll-inline-svg
+navlink: Tester
 ---
