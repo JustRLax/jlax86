@@ -14,5 +14,5 @@ fields:
   name: footer
   label: Footer
 pages:
-- _includes/header.html
 - _config.yml
+- _includes/header.html
