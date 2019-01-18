@@ -35,12 +35,8 @@ fields:
       - type: text
         name: title
         label: Title
-      - type: select
+      - type: text
         name: url
-        config:
-          source:
-            type: pages
-            section: pages
         label: URL
     config:
       max: '1'
