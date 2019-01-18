@@ -55,5 +55,24 @@ fields:
 - type: field_group
   name: footer
   label: Footer
+  fields:
+  - type: text
+    name: svg_logo
+    label: SVG Logo
+  - type: text
+    name: email
+    label: Email
+  - type: text
+    name: linkedin
+    label: LinkedIn
+  - type: text
+    name: instagram
+    label: Instagram
+  - type: text
+    name: dribbble
+    label: Dribbble
+  - type: text
+    name: codepen
+    label: Codepen
 pages:
 - _config.yml
