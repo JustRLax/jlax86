@@ -1,6 +1,6 @@
 ---
 label: Drift Videos
-hide_body: false
+hide_body: true
 is_partial: false
 fields:
 - type: select
@@ -82,3 +82,4 @@ fields:
       description: Download URL
 pages:
 - _pages/fb3.html
+- _pages/super-d-matsuri-2018--drift-videos-by-justin-laxamana.html
