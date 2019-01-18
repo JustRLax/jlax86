@@ -18,6 +18,9 @@ fields:
 - type: text
   name: permalink
   label: Permalink
+- type: file
+  name: background_image
+  label: Background Image
 - type: field_group_list
   name: featured_project
   label: Featured Project
