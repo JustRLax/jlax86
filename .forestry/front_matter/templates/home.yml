@@ -98,5 +98,3 @@ fields:
     name: video_preview_text
     label: Video Preview Text
     description: Hover Text
-pages:
-- index.html

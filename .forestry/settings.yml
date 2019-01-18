@@ -14,10 +14,6 @@ sections:
   match: "**/*"
   exclude: ".gitkeep"
   new_doc_ext: html
-- type: jekyll-pages
-  label: Home
-  create: all
-  new_doc_ext: html
 - type: document
   path: index.html
   label: Homepage
