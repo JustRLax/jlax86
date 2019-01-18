@@ -7,7 +7,6 @@ sections:
 - type: document
   path: _config.yml
   label: Global Settings
-  match: "**/*"
 - type: directory
   path: _includes
   label: Global Includes

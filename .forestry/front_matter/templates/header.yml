@@ -1,10 +1,17 @@
 ---
-label: Header
+label: Global
 hide_body: false
 is_partial: false
 fields:
-- type: text
-  label: TestVar
-  name: testvar
+- type: field_group
+  name: header
+  label: Header
+  fields:
+  - type: text
+    name: test
+    label: Test
+- type: field_group
+  name: footer
+  label: Footer
 pages:
 - _includes/header.html
