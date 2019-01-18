@@ -78,6 +78,6 @@ fields:
 - type: text
   name: sitebase
   label: SiteBase
-  description: Explicit URL Projects Page
+  description: Explicit URL for projects.jlax86.com
 pages:
 - _config.yml
