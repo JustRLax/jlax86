@@ -63,11 +63,11 @@ videos:
         <h2>Videos</h2>
         
         {% for video in page.videos %}
-        {{ if video.is_featured }}
+        {% if video.is_featured %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">
-          {{ if video.coming_soon }}
+          {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
-          {{ end }}
+          {% endif %}
           <div class="image">
             <picture>
               <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
@@ -85,7 +85,7 @@ videos:
           </div> <!-- / .image -->
         </div> <!-- / __item -->
         
-		{{ end }}
+		{% endif %}
         {% endfor %}
         
         <a href="{{ page.logo.url}}" target="_blank" class="logo">
@@ -96,11 +96,11 @@ videos:
       <div class="grid-section__grid">
         
         {% for video in page.videos %}
-        {{ if video.is_featured }}{{ else }}
+        {% if video.is_featured %}{% else %}
         <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="500">
-          {{ if video.coming_soon }}
+          {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
-          {{ end }}
+          {% endif %}
           <div class="image">
             <picture>
               <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
@@ -117,7 +117,7 @@ videos:
             </div> <!-- / __contents -->
           </div> <!-- / .image -->
         </div> <!-- / __item -->
-        {{ end }}
+        {% endif %}
         {% endfor %}
         
       </div> <!-- / __grid -->
