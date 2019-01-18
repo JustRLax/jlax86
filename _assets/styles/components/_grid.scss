@@ -244,7 +244,8 @@
     &__grid {
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      flex-flow: row-reverse wrap-reverse;
+
     }
     &__item {
       width: calc(100% / 3);
