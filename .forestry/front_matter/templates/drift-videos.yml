@@ -39,5 +39,33 @@ fields:
   - type: text
     name: url
     label: URL
+- type: field_group
+  name: videos
+  label: Videos
+  fields:
+  - type: field_group_list
+    name: video
+    label: Video
+    fields:
+    - type: file
+      name: thumbnail
+      label: Thumbnail
+      description: 1500x844 (16:9)
+    - type: boolean
+      name: is_featured
+      label: Is Featured
+      description: Large 1st Video
+    - type: boolean
+      name: coming_soon
+      label: Coming Soon
+      description: Unreleased and Unclickable
+    - type: text
+      name: youtube
+      label: Youtube
+      description: YouTube Video URL
+    - type: text
+      name: download
+      label: Download
+      description: Download URL
 pages:
 - _pages/fb3.html
