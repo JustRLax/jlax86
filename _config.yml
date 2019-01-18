@@ -31,9 +31,19 @@ header:
   dropdown:
   - title: Drift Videos
     sublink:
+    - title: Final Bout 3
+      url: _pages/fb3.html
+    - title: Super D Matsuri 2018
+      url: _pages/masturi.html
+    - title: Club FR Jam 2018
+      url: _pages/jam.html
+    - title: Super D Midwest Trial
+      url: _pages/mwt.html
+    - title: Rio Bash
+      url: _pages/rio.html
     - title: Miscellaneous
-      url: "/misc"
+      url: _pages/misc.html
   button:
   - title: Contact
-    url: "/contact"
+    url: _pages/contact.html
 footer: {}
