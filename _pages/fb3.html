@@ -8,7 +8,7 @@ the_description: "<p>Final Bout 3 took place on September 3rd-4th 2017 in Shawan
   North America displaying beautiful car styling and aggressive driving.</p>"
 featured_images:
   large: "/v1544831099/fb3-lrg.jpg"
-  small: ''
+  small: "/v1544831322/fb3-sm.jpg"
 logo:
   image: ''
   url: ''
@@ -37,8 +37,8 @@ logo:
         </div> <!-- / .image -->
         <div class="corner" data-aos="fade-left" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="500">
           <picture>
-            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-sm.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-sm.jpg 2x">
-            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-sm.jpg" alt="Final Bout 3 Image">
+            <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ page.featured_images.small | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.small | relative_url }} 2x">
+            <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ page.featured_images.small | relative_url }}" alt="Final Bout 3 Image">
           </picture>
         </div> <!-- / .corner -->
       </div> <!-- / __circle -->
