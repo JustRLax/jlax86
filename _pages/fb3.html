@@ -94,9 +94,9 @@ videos:
           {{ end }}
           <div class="image">
             <picture>
-              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-2.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500/fb3-2.jpg 2x">
-              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500/fb3-2.jpg, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-2.jpg 2x">
-              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700/fb3-2.jpg" alt="Final Bout 3 Image">
+              <source media="(min-width: 1200px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_1500{{ video.thumbnail | relative_url }} 2x">
+              <source media="(min-width: 700px)" srcset="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_500{{ video.thumbnail | relative_url }}, https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }} 2x">
+              <img src="https://res.cloudinary.com/justinlaxamana/image/upload/c_scale,w_700{{ video.thumbnail | relative_url }}" alt="Final Bout 3 Image">
             </picture>
             <div class="image__contents">
               <a href="{{ video.youtube }}" class="play">
