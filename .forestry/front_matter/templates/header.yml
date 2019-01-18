@@ -6,3 +6,5 @@ fields:
 - type: text
   label: TestVar
   name: testvar
+pages:
+- _includes/header.html
