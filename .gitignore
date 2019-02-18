@@ -1,6 +1,8 @@
-*.gem
-.bundle
-.sass-cache
-.DS_Store
-node_modules
-Gemfile.lock
+node_modules/
+.DS_Store/
+**/.DS_Store
+.idea/
+site.retry
+*.log
+src/vendor/*
+/package-lock.json
