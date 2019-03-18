@@ -63,18 +63,18 @@ fields:
       label: Thumbnail
       description: 1500x844 (16:9)
     - type: boolean
+      name: is_featured
+      label: Is Featured
+      description: Large 1st Video
+    - type: boolean
       name: coming_soon
       label: Coming Soon
       description: Unreleased and Unclickable
       default: true
-    - type: boolean
-      name: is_featured
-      label: Is Featured
-      description: Large 1st Video
     - type: text
       name: youtube
       label: Youtube
-      description: YouTube Video URL
+      description: YouTube URL
     - type: text
       name: download
       label: Download
