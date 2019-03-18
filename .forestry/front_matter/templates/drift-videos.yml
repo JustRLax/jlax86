@@ -71,6 +71,11 @@ fields:
       label: Coming Soon
       description: Unreleased and Unclickable
       default: true
+    - type: boolean
+      name: not_realeased
+      label: Not Realeased
+      description: Unclickable
+      default: true
     - type: text
       name: youtube
       label: Youtube
