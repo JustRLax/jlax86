@@ -22,7 +22,7 @@ fields:
   label: Page Name
 - type: textarea
   name: the_description
-  label: Description
+  label: 'Description '
   config:
     wysiwyg: true
     schema:
