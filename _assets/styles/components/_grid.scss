@@ -232,7 +232,7 @@
     &__grid {
       width: 100%;
       display: flex;
-      flex-flow: row-reverse wrap-reverse;
+      flex-wrap: wrap;
     }
     &__item {
       width: calc(100% / 3);
