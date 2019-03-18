@@ -12,6 +12,13 @@ fields:
   name: layout
   default: drift-videos
 - type: text
+  name: class
+  label: Class
+  config:
+    required: false
+  hidden: true
+  default: dark
+- type: text
   name: title
   label: Title
 - type: text
