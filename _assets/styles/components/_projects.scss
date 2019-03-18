@@ -8,12 +8,6 @@
     background-image: linear-gradient(-180deg, rgba(62,67,111,0.9) 0%, RGBA(215, 33, 62, .90) 100%);
   }
 }
-.no-touch {
-  .projects__two-col .logo {
-    opacity: var(--lo);
-    transform: translateY(var(--lt));
-  }
-}
 .projects {
   width: 100%;
   position: relative;
@@ -58,9 +52,6 @@
     position: relative;
     z-index: 100;
     box-shadow: $shadow;
-    opacity: var(--bo);
-    transform: translateY(var(--bt));
-    will-change: opacity transform;
     @include breakpoint(600px) {
       padding: 80px 40px;
       min-width: 100%;
@@ -144,10 +135,12 @@
       width: 100%;
       left: 0;
       z-index: 100;
-      opacity: .12;
       top: 120px;
       @include breakpoint(960px) {
         top: 140px;
+      }
+      svg {
+        opacity: .12;
       }
     }
     h2 {

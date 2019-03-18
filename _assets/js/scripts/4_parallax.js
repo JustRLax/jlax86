@@ -8,15 +8,12 @@ function detectScroll() {
 		$('.footer').removeClass('show');
 	}
 }
-if($('.no-touch .intro').length) {
-	$('.footer').addClass('home');
-	window.addEventListener('scroll', throttle(detectScroll, 25));
-}
-
-
 if($('body.no-touch').length) {
 
 	function parallax() {
+		$('.footer').addClass('home');
+		window.addEventListener('scroll', throttle(detectScroll, 25));
+
 		const skyChange = basicScroll.create({
 			elem: document.querySelector('.scene__sky--dark'),
 			from: '0',
@@ -56,59 +53,40 @@ if($('body.no-touch').length) {
 		});
 		foregroundMove.start();
 
-		const blockShow = basicScroll.create({
-			elem: document.querySelector('.projects__project--fixed'),
-			from: 'top-bottom',
-			to: 'middle-bottom',
+		const footerRise = basicScroll.create({
+			elem: document.querySelector('.last-project'),
+			from: 'middle-top',
+			to: 'bottom-top',
+			direct: document.querySelector('.scene__sun--footer'),
 			props: {
-				'--bo': {
-					from: 0,
-					to: 1
-				},
-				'--bt': {
-					from: '-200px',
-					to: '0px'
+				'--rise': {
+					from: '400px',
+					to: '0'
 				}
 			}
 		});
-		blockShow.start();
+		footerRise.start();
 
-		const ldShow = basicScroll.create({
-			elem: document.querySelector('.projects__project--dark'),
-			from: 'top-bottom',
-			to: 'middle-bottom',
-			props: {
-				'--lo': {
-					from: 0,
-					to: .12
-				},
-				'--lt': {
-					from: '200px',
-					to: '0px'
-				}
-			}
+		//Fix Footer for Parallax
+		function fixedElements() {
+		  if($('.foreground').length) {
+		    var scrollTop = $(window).scrollTop();
+		    var screenTop = $('.foreground').offset().top - 300;
+		    var footerTop = $('.global-footer').offset().top - 300;
+		  }
+		}
+		window.addEventListener('scroll', throttle(fixedElements, 25));
+
+		var resizeTimer;
+		$(window).on("resize", function(e) {
+		  clearTimeout(resizeTimer);
+		  resizeTimer = setTimeout(function() {
+		    fixedElements();
+		  }, 250);
 		});
-		ldShow.start();
 
-
-		if ($('.footer').length) {
-				const footerRise = basicScroll.create({
-					elem: document.querySelector('.last-project'),
-					from: 'middle-top',
-					to: 'bottom-top',
-					direct: document.querySelector('.scene__sun--footer'),
-					props: {
-						'--rise': {
-							from: '400px',
-							to: '0'
-						}
-					}
-				});
-				footerRise.start();
-				$('.footer').addClass('home');
-			}
+		$(window).triggerHandler("resize");
 	}
-
 
 	if($('.foreground').length) {
 		parallax();
@@ -147,4 +125,15 @@ if($('body.no-touch').length) {
 		}
 		moveBg();
 	}
+}
+
+//Throttling Function
+function throttle(fn, wait) {
+  var time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  }
 }
