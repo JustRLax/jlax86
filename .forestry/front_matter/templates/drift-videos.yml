@@ -38,16 +38,6 @@ fields:
     name: small
     label: Small
 - type: field_group
-  name: logo
-  label: Logo
-  fields:
-  - type: file
-    name: image
-    label: Image
-  - type: text
-    name: url
-    label: URL
-- type: field_group
   name: videos
   label: Videos
   fields:
