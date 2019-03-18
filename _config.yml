@@ -29,22 +29,8 @@ header:
   - title: Client Work
     url: "#"
     alert: true
-  dropdown:
   - title: Drift Videos
-    sublink:
-    - title: Final Bout 3
-      url: "/fb3"
-    - title: Super D Matsuri 2018
-      url: "/matsuri"
-    - title: Club FR Jam 2018
-      url: "/jam"
-    - title: Super D Midwest Trial
-      url: "/mwt"
-    - title: Rio Bash
-      url: "/rio"
-    - title: Miscellaneous
-      url: "/misc"
-  button:
+    url: "/drift"
   - title: Contact
     url: "/contact"
 footer:

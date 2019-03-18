@@ -1,25 +1,39 @@
 <header class="main-header">
-  <a href="{{ site.sitebase }}/" class="logo">{% svg ../../assets/resources/logo-small.svg %}</a>
+  <a href="#" class="main-header__menu">
+    <span class="menu">
+      <span>Menu</span>
+    </span>
+  </a> <!-- / __menu -->
   <nav>
-    <ul>
+    <a href="{{ site.sitebase }}/" class="logo">{% svg ../../assets/resources/logo-small.svg %}</a>
+    <ul class="links">
       {% for link in site.header.link %}
       <li><a {% if link.alert == true %} class="alert" {% endif %}
  href="{{ site.sitebase }}{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
-      {% for dropdown in site.header.dropdown %}
-      <li>
-        <a class="with-dropdown" href="#">{{ dropdown.title }}</a>
-        <ul class="dropdown">
-          {% for sublink in dropdown.sublink %}
-          <li><a href="{{ site.sitebase }}{{ sublink.url }}">{{ sublink.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
-      {% endfor %}
     </ul>
-    {% for button in site.header.button %}
-    <a href="{{ site.sitebase }}{{ button.url }}" class="button">{{ button.title }}</a>
-    {% endfor %}
+    <ul class="social">
+
+      {% unless site.footer.email == '' %}
+      <li><a href="{{site.footer.email}}" alt="email">{% svg ../../assets/resources/email.svg %}</a></li>
+      {% endunless %}
+
+      {% unless site.footer.linkedin == '' %}
+      <li><a target="_blank" href="{{site.footer.linkedin}}" alt="linkedin">{% svg ../../assets/resources/linkedin.svg %}</a></li>
+      {% endunless %}
+
+      {% unless site.footer.instagram == '' %}
+      <li><a target="_blank" href="{{site.footer.instagram}}" alt="instagram">{% svg ../../assets/resources/instagram.svg %}</a></li>
+      {% endunless %}
+
+      {% unless site.footer.dribbble == '' %}
+      <li><a target="_blank" href="{{site.footer.dribbble}}" alt="dribbble">{% svg ../../assets/resources/dribbble.svg %}</a></li>
+      {% endunless %}
+
+      {% unless site.footer.codepen == '' %}
+      <li><a target="_blank" href="{{site.footer.codepen}}" alt="codepen">{% svg ../../assets/resources/codepen.svg %}</a></li>
+      {% endunless %}
+    </ul>
   </nav>
 </header>
 <main role="main">

@@ -139,6 +139,9 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      @include breakpoint(1200px) {
+        margin-bottom: 0;
+      }
       @include breakpoint(900px) {
         margin-top: 0px;
       }
@@ -152,6 +155,24 @@
           margin-left: 10px;
         }
       }
+      h3 {
+        text-align: left;
+        width: calc(100% - 580px);
+        font-size: 1.25em;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: $oswald;
+        padding-left: 10px;
+        @include breakpoint(740px) {
+          width: 30%;
+        }
+        @include breakpoint(530px) {
+          width: 20%;
+        }
+        @include breakpoint(400px) {
+          font-size: 1em;
+        }
+      }
       .grid-section__item {
         margin-left: -15px;
         position: relative;
@@ -160,14 +181,11 @@
           display: block;
           width: 100%;
         }
-        @include breakpoint(940px) {
-          width: 420px;
-        }
         @include breakpoint(740px) {
-          width: 59%;
+          width: 70%;
         }
         @include breakpoint(530px) {
-          width: 100%;
+          width: 80%;
           margin-left: 0;
         }
       }
@@ -209,54 +227,24 @@
           @include cite;
         }
       }
-      a.logo {
-        border: 1px solid rgba(0,0,0,.2);
-        transition: $dt;
-        &:hover {
-          border-color: $red;
-        }
-      }
-      .logo {
-        width: calc(100% - 820px);
-        max-height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        @include breakpoint(1200px) {
-          width: calc(100% - 700px);
-          padding: 10px;
-        }
-        @include breakpoint(940px) {
-          width: 200px;
-          margin-top: 0;
-        }
-        @include breakpoint(530px) {
-          display: none;
-        }
-        img {
-          width: 200px;
-          max-height: 100%;
-          display: block;
-        }
-      }
     }
     &__grid {
       width: 100%;
       display: flex;
       flex-flow: row-reverse wrap-reverse;
-
     }
     &__item {
       width: calc(100% / 3);
       position: relative;
       padding: 15px;
+      @include breakpoint(1200px) {
+        padding: 5px;
+      }
       @include breakpoint(900px) {
         width: 50%;
       }
       @include breakpoint(530px) {
-        width: 100%;
-        padding: 8px;
+        padding: 2px;
       }
       .quote {
         position: absolute;
@@ -293,11 +281,17 @@
         text-transform: uppercase;
         letter-spacing: 3px;
         font-size: .875em;
+        @include breakpoint(1200px) {
+          left: 5px;
+          top: 5px;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+        }
         @include breakpoint(530px) {
-          left: 8px;
-          top: 8px;
-          width: calc(100% - 16px);
-          height: calc(100% - 16px);
+          left: 1px;
+          top: 1px;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
         }
         span {
           display: inline-block;
@@ -328,7 +322,6 @@
           top: 0;
           width: 100%;
           height: 100%;
-          opacity: 0;
           transition: $dt;
           &:before {
             @include content100;
@@ -337,81 +330,62 @@
           .play {
             position: absolute;
             left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+            bottom: 0;
+            padding: 20px;
+            width: 80px;
+            height: 80px;
             z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
-            display: none;
-            svg {
-              width: 80px;
-              height: 80px;
-              @include breakpoint(500px) {
-                width: 50px;
-                height: 50px;
+            @include breakpoint(900px) {
+              padding: 15px;
+              width: 60px;
+              height: 60px;
+            }
+            &:hover {
+              .play-a {
+                fill: $red;
               }
+            }
+            svg {
+              width: 100%;
+              height: 100%;
             }
           }
           .download {
             position: absolute;
             right: 0px;
             bottom: 0px;
-            width: 50px;
-            height: 50px;
+            padding: 20px;
+            width: 70px;
+            height: 70px;
             z-index: 100;
-            background: $white;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: $dt;
+            @include breakpoint(900px) {
+              padding: 15px;
+              width: 56px;
+              height: 56px;
+            }
             svg {
-              width: 20px;
+              width: 100%;
+              height: 100%;
+            }
+            .a-download {
+              fill: $white;
             }
             &:hover {
-              background: $red;
               .a-download {
-                fill: $white;
+                fill: $red;
               }
             }
           }
         }
       }
-    }
-  }
-}
-.no-touch .grid-section__item .image {
-  &:hover {
-    transform: translateY(-5px);
-    &:before {
-      opacity: 0;
-    }
-    &:after {
-      opacity: 1;
-    }
-    .image__contents {
-      opacity: 1;
-    }
-    .play {
-      display: flex;
-    }
-  }
-}
-.touch .grid-section__item .image {
-  &.active {
-    transform: translateY(-5px);
-    &:before {
-      opacity: 0;
-    }
-    &:after {
-      opacity: 1;
-    }
-    .image__contents {
-      opacity: 1;
-    }
-    .play {
-      display: flex;
     }
   }
 }

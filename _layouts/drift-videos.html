@@ -39,7 +39,7 @@ layout: default
 
         {% for video in page.videos.video %}
         {% if video.is_featured %}
-        <div class="grid-section__item" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">
+        <div class="grid-section__item" data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">
           {% if video.coming_soon %}
           <div class="soon"><span>Coming Soon</span></div>
           {% endif %}
@@ -62,17 +62,8 @@ layout: default
 
 		{% endif %}
         {% endfor %}
+        <h3 data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="500">Latest Video</h3>
 
-
-        {% if page.logo.url == '' %}
-        <span class="logo">
-          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
-        </span>
-        {% else %}
-        <a href="{{ page.logo.url}}" target="_blank" class="logo">
-          <img src="https://res.cloudinary.com/justinlaxamana/image/upload{{ page.logo.image}}" alt="{{ page.the_name }} Logo">
-        </a>
-        {% endif %}
       </div> <!-- / __header -->
       <div class="grid-section__grid">
 

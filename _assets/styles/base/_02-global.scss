@@ -23,7 +23,7 @@ $shadow-sm: 0 6px 20px 0 rgba(0,0,0,.1);
 $shadow-hov: 0 10px 40px 0 rgba(0,0,0,.25);
 
 //Gradient
-$black-grad: linear-gradient(-180deg, rgba(0,0,0,.2) 30%, rgba(0,0,0,.8) 79%);
+$black-grad: linear-gradient(-180deg, rgba(0,0,0,.1) 30%, rgba(0,0,0,.4) 79%);
 $black-grad-2: linear-gradient(-180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.9) 100%);
 $black-grad-3: linear-gradient(-180deg, rgba(0,0,0,.7) 30%, rgba(0,0,0,.8) 79%);
 
@@ -76,6 +76,7 @@ $dt: .3s all ease-in-out;
   color: $white;
   border-radius: 6px;
   text-decoration: none;
+  text-align: center;
   transition: $transition;
 }
 .special.button {

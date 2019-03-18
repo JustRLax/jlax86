@@ -26,17 +26,17 @@ layout: default
       {% svg ../../assets/resources/foreground-cap.svg %}
     </div> <!-- / __right -->
     <ul class="scene__items">
-      <li class="scene__items__speedbag item" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <li class="scene__items__speedbag item" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
         <a href="#fight" class="fight-modal">
           {% svg ../../assets/resources/speedbag.svg %}
         </a>
       </li> <!-- / __sniper -->
-      <li class="scene__items__bike item" data-aos="fade-right" data-aos-delay="470" data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <li class="scene__items__bike item" data-aos="fade-right" data-aos-delay="470" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <a href="#bikes" class="open-slider bikes-modal">
         {% svg ../../assets/resources/bike.svg %}
         </a>
       </li> <!-- / __bike -->
-      <li class="scene__items__helmet item" data-aos="fade-down" data-aos-delay="460" data-aos-easing="ease-in-out" data-aos-duration="700">
+      <li class="scene__items__helmet item" data-aos="fade-down" data-aos-delay="460" data-aos-easing="ease-in-out" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
         <a href="#cars" class="cars-modal">
           {% svg ../../assets/resources/helmet.svg %}
         </a>
@@ -44,7 +44,7 @@ layout: default
           <p>86</p>
         </div>  / .tooltip -->
       </li> <!-- / __helmet -->
-      <li class="scene__items__cat item" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <li class="scene__items__cat item" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
         <a href="#" class="cat-modal">
           {% svg ../../assets/resources/cat.svg %}
         </a>
@@ -93,14 +93,7 @@ layout: default
       <section class="projects__block">
         <h2>{{ page.drift_videos.title }}</h2>
         {{ page.drift_videos.description }}
-        <div class="list-dropdown">
-          <span class="title">Select stage..</span>
-          <ul>
-            {% for dropdown in page.drift_videos.dropdown %}
-            <li><a href="{{ dropdown.page_url }}">{{ dropdown.page_name }}</a></li>
-            {% endfor %}
-          </ul>
-        </div> <!-- / .list-dropdown -->
+        <a href="/drift" class="button">View Videos</a>
       </section> <!-- / __block -->
     </div> <!-- / __project -->
     <div class="projects__project projects__project--dark last-project">
@@ -125,11 +118,8 @@ layout: default
           </div> <!-- / .col -->
         </div> <!-- / .container -->
       </div> <!-- / __two-col -->
-      <div class="video-bg">
-				<video autoplay playsinline muted loop preload="auto" class="video" poster="{{ page.featured_project.video_poster }}">
-					<source src="{{ page.featured_project.video_url }}" type="video/webm"/>
-				</video>
-			</div><!-- / video-bg -->
+      <div class="image-bg" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload{{ page.featured_project.video_poster }});">
+			</div><!-- / image-bg -->
     </div> <!-- / __project -->
   </div> <!-- / .projects -->
 </div> <!-- / .foreground -->

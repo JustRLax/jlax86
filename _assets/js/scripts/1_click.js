@@ -1,3 +1,19 @@
+//Menu
+$('.main-header__menu').on("click", function(e){
+  $('.main-header').toggleClass('active');
+  if($('.main-header').hasClass('active')) {
+    $('.main-header').append('<span class="close"></span>');
+  } else {
+    $('.close').remove();
+  }
+  e.preventDefault();
+});
+
+$('.main-header').on("click",'.close', function(){
+  $('.main-header').removeClass('active');
+  $(this).remove();
+});
+
 //scene
 $('.scene__items__cat').on("click", function(e){
   $(this).toggleClass('meow');
@@ -29,20 +45,9 @@ function throttle(fn, wait) {
 //Fixed Scroll
 function fixedElements() {
   if($('.foreground').length) {
-    $('.main-header').addClass('hidden');
     var scrollTop = $(window).scrollTop();
     var screenTop = $('.foreground').offset().top - 300;
     var footerTop = $('.global-footer').offset().top - 300;
-
-    if(scrollTop >= screenTop) {
-      $('.main-header').addClass('active');
-    }
-    else {
-      $('.main-header').removeClass('active');
-    }
-    if(scrollTop >= footerTop) {
-      $('.main-header').removeClass('active');
-    }
   }
   if($('.waypoint').length) {
     if($('.waypoint.aos-animate').length) {
