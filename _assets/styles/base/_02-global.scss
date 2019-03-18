@@ -62,6 +62,10 @@ $dt: .3s all ease-in-out;
   margin: 0 auto;
   padding: 0 40px;
 }
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 //Button
 .button {

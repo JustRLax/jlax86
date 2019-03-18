@@ -66,26 +66,6 @@ if($('body.no-touch').length) {
 			}
 		});
 		footerRise.start();
-
-		//Fix Footer for Parallax
-		function fixedElements() {
-		  if($('.foreground').length) {
-		    var scrollTop = $(window).scrollTop();
-		    var screenTop = $('.foreground').offset().top - 300;
-		    var footerTop = $('.global-footer').offset().top - 300;
-		  }
-		}
-		window.addEventListener('scroll', throttle(fixedElements, 25));
-
-		var resizeTimer;
-		$(window).on("resize", function(e) {
-		  clearTimeout(resizeTimer);
-		  resizeTimer = setTimeout(function() {
-		    fixedElements();
-		  }, 250);
-		});
-
-		$(window).triggerHandler("resize");
 	}
 
 	if($('.foreground').length) {
@@ -125,6 +105,33 @@ if($('body.no-touch').length) {
 		}
 		moveBg();
 	}
+
+	function fixedElements() {
+	  if($('.foreground').length) {
+	    var scrollTop = $(window).scrollTop();
+	    var screenTop = $('.foreground').offset().top - 300;
+	    var footerTop = $('.global-footer').offset().top - 300;
+	  }
+	  if($('.waypoint').length) {
+	    if($('.waypoint.aos-animate').length) {
+	      $('.main-header').addClass('hidden');
+	    } else {
+	      $('.main-header').removeClass('hidden');
+	    }
+	  }
+	}
+	window.addEventListener('scroll', throttle(fixedElements, 25));
+
+	var resizeTimer;
+	$(window).on("resize", function(e) {
+	  clearTimeout(resizeTimer);
+	  resizeTimer = setTimeout(function() {
+	    fixedElements();
+	  }, 250);
+	});
+
+	$(window).triggerHandler("resize");
+
 }
 
 //Throttling Function
