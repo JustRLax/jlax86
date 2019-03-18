@@ -1,7 +1,6 @@
 ---
 label: Drift Videos
 hide_body: true
-is_partial: false
 fields:
 - type: select
   config:
@@ -80,10 +79,3 @@ fields:
       name: download
       label: Download
       description: Download URL
-pages:
-- _pages/rio.html
-- _pages/misc.html
-- _pages/mwt.html
-- _pages/fb3.html
-- _pages/jam.html
-- _pages/masturi.html
