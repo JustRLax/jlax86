@@ -8,12 +8,15 @@ function detectScroll() {
 		$('.footer').removeClass('show');
 	}
 }
+if($('.no-touch .intro').length) {
+	$('.footer').addClass('home');
+	window.addEventListener('scroll', throttle(detectScroll, 25));
+}
+
+
 if($('body.no-touch').length) {
 
 	function parallax() {
-		$('.footer').addClass('home');
-		window.addEventListener('scroll', throttle(detectScroll, 25));
-
 		const skyChange = basicScroll.create({
 			elem: document.querySelector('.scene__sky--dark'),
 			from: '0',
@@ -70,6 +73,23 @@ if($('body.no-touch').length) {
 
 	if($('.foreground').length) {
 		parallax();
+
+		//Fixed Scroll
+		function fixedElements() {
+		  var scrollTop = $(window).scrollTop();
+		  var screenTop = $('.foreground').offset().top - 300;
+		  var footerTop = $('.global-footer').offset().top - 300;
+		}
+		window.addEventListener('scroll', throttle(fixedElements, 25));
+		var resizeTimer;
+		$(window).on("resize", function(e) {
+		  clearTimeout(resizeTimer);
+		  resizeTimer = setTimeout(function() {
+		    fixedElements();
+		  }, 250);
+		});
+		$(window).triggerHandler("resize");
+		
 	}
 
 	if($('.grid').length) {
@@ -105,35 +125,7 @@ if($('body.no-touch').length) {
 		}
 		moveBg();
 	}
-
-	function fixedElements() {
-	  if($('.foreground').length) {
-	    var scrollTop = $(window).scrollTop();
-	    var screenTop = $('.foreground').offset().top - 300;
-	    var footerTop = $('.global-footer').offset().top - 300;
-	  }
-	  if($('.waypoint').length) {
-	    if($('.waypoint.aos-animate').length) {
-	      $('.main-header').addClass('hidden');
-	    } else {
-	      $('.main-header').removeClass('hidden');
-	    }
-	  }
-	}
-	window.addEventListener('scroll', throttle(fixedElements, 25));
-
-	var resizeTimer;
-	$(window).on("resize", function(e) {
-	  clearTimeout(resizeTimer);
-	  resizeTimer = setTimeout(function() {
-	    fixedElements();
-	  }, 250);
-	});
-
-	$(window).triggerHandler("resize");
-
 }
-
 //Throttling Function
 function throttle(fn, wait) {
   var time = Date.now();

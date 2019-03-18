@@ -85,7 +85,7 @@ if ($('.scene').length) {
       removalDelay: 700,
       items: [
         {
-          src: $('<div class="image-container sm"><img src="assets/resources/hands.gif" alt="jlax86 hands"/><p>Student of <a href="https://www.facebook.com/BeiShaolinMeiHuaInstitute/" target="_blank">Bei Shaolin Mei Hua Institute</a></p></div>'),
+          src: $('<div class="image-container sm"><img src="https://res.cloudinary.com/justinlaxamana/image/upload/v1552935339/hands.gif" alt="jlax86 hands"/><p>Student of <a href="https://www.facebook.com/BeiShaolinMeiHuaInstitute/" target="_blank">Bei Shaolin Mei Hua Institute</a></p></div>'),
           type: 'inline'
         }
       ],
