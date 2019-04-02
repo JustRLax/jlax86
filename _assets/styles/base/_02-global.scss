@@ -3,8 +3,10 @@
 //**** Colors
 $purple: #2A2240;
 $white: #fff;
+$black: #000;
 $teal: #0E5664;
 $red: #D0021B;
+$gold: #C9AC59;
 
 //Selection
 ::-moz-selection {
@@ -19,6 +21,7 @@ $red: #D0021B;
 //Shadows
 $shadow: 0 0 40px 0 rgba(0,0,0,.20);
 $shadow-lrg: 0 20px 60px 0 rgba(0,0,0,.50);
+$shadow-lg: 0 20px 60px 0 rgba(0,0,0,.25);
 $shadow-sm: 0 6px 20px 0 rgba(0,0,0,.1);
 $shadow-hov: 0 10px 40px 0 rgba(0,0,0,.25);
 
@@ -40,6 +43,7 @@ $blue-grad: linear-gradient(130deg, rgba(81,163,210,.5) 0%, rgba(40,106,166,1.0)
 //**** Typography
 $oswald: 'Oswald', sans-serif;
 $lato: 'Lato', sans-serif;
+$mon: 'Montserrat', sans-serif;
 
 
 //**** Transitions

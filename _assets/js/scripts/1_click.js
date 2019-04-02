@@ -19,3 +19,10 @@ $('.scene__items__cat').on("click", function(e){
   $(this).toggleClass('meow');
   e.preventDefault();
 });
+
+//FTD menu
+$('.ftd-menu').on("click", function(e){
+  $('.ftd-header').toggleClass('active');
+  $(this).toggleClass('active');
+  e.preventDefault();
+});

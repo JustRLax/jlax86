@@ -1,0 +1,669 @@
+//FTD Demo
+.ftd-page {
+  font-family: $mon;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  .container {
+    max-width: 1280px;
+    @include breakpoint(700px) {
+      padding: 0 20px;
+    }
+  }
+  &:before {
+    @include content100;
+    height: 100vh;
+    background: $white;
+    z-index: -1;
+  }
+  .ftd-header {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    padding: 30px;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 1000;
+    @include breakpoint(1080px) {
+      padding: 10px;
+    }
+    @include breakpoint(970px) {
+      width: 300px;
+      height: 100%;
+      position: fixed;
+      background: $gold;
+      display: none;
+      padding: 40px;
+      &.active {
+        display: block;
+        @include animated(.375s);
+        @include fadeInRight();
+      }
+    }
+    &__logo {
+      width: 60px;
+      display: inline-block;
+    }
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      @include breakpoint(970px) {
+        padding: 0;
+        display: block;
+      }
+    }
+    &__wrapper {
+      background: $gold;
+      width: 100%;
+      padding: 14px 30px;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      @include breakpoint(970px) {
+        background: none;
+        padding: 0;
+        box-shadow: none;
+        display: block;
+      }
+      &:before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        background: $gold;
+        height: 100%;
+        right: -100%;
+        top: 0px;
+        z-index: -1;
+        @include breakpoint(970px) {
+          display: none;
+        }
+      }
+      &:after {
+        content: '';
+        width: 60px;
+        position: absolute;
+        background: $gold;
+        height: 100%;
+        right: -30px;
+        top: 0px;
+        z-index: 1;
+        @include breakpoint(970px) {
+          display: none;
+        }
+      }
+    }
+    nav {
+      width: calc(100% - 100px);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @include breakpoint(970px) {
+        width: 100%;
+        display: block;
+        padding-top: 20px;
+      }
+      ul {
+        display: inline-block;
+      }
+      li {
+        display: inline-block;
+        margin: 0px 25px;
+        @include breakpoint(1120px) {
+          margin: 0 10px;
+        }
+        @include breakpoint(970px) {
+          display: block;
+          width: 100%;
+          margin: 0;
+        }
+      }
+      a {
+        color: $white;
+        text-transform: uppercase;
+        font-size: .875em;
+        text-decoration: none;
+        transition: $dt;
+        @include breakpoint(970px) {
+          display: block;
+          font-size: 1.25em;
+          padding: 10px 0;
+          font-weight: 900;
+          letter-spacing: -1px;
+        }
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+    .ftd-search {
+      display: inline-block;
+      margin-left: 20px;
+      @include breakpoint(970px) {
+        display: block;
+        margin-left: 0;
+      }
+      &:hover {
+        .a-magnify {
+          fill: $black;
+        }
+      }
+      span {
+        display: none;
+        @include breakpoint(970px) {
+          display: inline-block;
+        }
+      }
+      svg {
+        width: 18px;
+        height: 18px;
+        @include breakpoint(970px) {
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }
+    }
+    .container {
+      display: flex;
+    }
+  }
+  .ftd-menu {
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 5000;
+    background: $gold;
+    box-shadow: $shadow;
+    transition: $dt;
+    display: none;
+    @include breakpoint(970px) {
+      display: flex;
+    }
+    &.active {
+      .menu {
+        background: none;
+        span {
+          background: rgba(0,0,0,0);
+          &:before {
+            transform: rotate(-45deg) scale(1.2);
+            top: 0px;
+            background: $white;
+          }
+          &:after {
+            transform: rotate(45deg) scale(1.2);
+            top: 0px;
+            background: $white;
+          }
+        }
+      }
+    }
+    .menu {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      z-index: 100;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        position: relative;
+        background: $white;
+        text-indent: -9999em;
+        top: 0px;
+        transition: $dt;
+        &:after,
+        &:before {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: $white;
+          position: absolute;
+          transition: $dt;
+          backface-visibility: hidden;
+          right: 0;
+        }
+        &:after {
+          top: -7px;
+        }
+        &:before {
+          bottom: -7px;
+        }
+      }
+    }
+  }
+  .ftd-intro {
+    width: 100%;
+    padding-top: 100px;
+    position: relative;
+    @include breakpoint(970px) {
+      padding-top: 40px;
+    }
+  }
+  .ftd-slider {
+    position: relative;
+    .slick-list {
+      overflow: visible !important;
+    }
+    .pager {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 40px;
+      bottom: -20px;
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      box-shadow: $shadow-sm;
+      transition: $dt;
+      @include breakpoint(970px) {
+        bottom: -50px;
+      }
+      @include breakpoint(700px) {
+        bottom: -30px;
+      }
+      &:hover {
+        .smArrow-a {
+          fill: $gold;
+        }
+      }
+      &.prev {
+        svg {
+          transform: rotate(-180deg);
+        }
+        transform: translateX(-54px);
+      }
+      svg {
+        width: 12px;
+        height: 20px;
+      }
+    }
+    &__slide {
+      min-height: 400px;
+      position: relative;
+      &.slick-active {
+        .ftd-slider__content {
+          @include animated(.5s);
+          @include fadeInRight();
+        }
+        .ftd-slider__image {
+          @include animated(.5s);
+          @include fadeInLeft();
+        }
+      }
+    }
+    &__content {
+      background: $white;
+      box-shadow: $shadow-lg;
+      padding: 50px 40px;
+      width: 420px;
+      max-width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      opacity: 0;
+      @include breakpoint(970px) {
+        bottom: -30px;
+      }
+      @include breakpoint(700px) {
+        bottom: 0px;
+        position: static;
+        width: 100%;
+      }
+      h1 {
+        font-size: 1.375em;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: .875em;
+        line-height: 2;
+        margin-bottom: 20px;
+      }
+    }
+    &__image {
+      width: calc(100% - 150px);
+      position: relative;
+      left: -90px;
+      top: -30px;
+      max-width: 100%;
+      box-shadow: $shadow-lg;
+      opacity: 0;
+      @include breakpoint(1380px) {
+        left: -40px;
+      }
+      @include breakpoint(970px) {
+        left: -40px;
+        top: 0;
+        width: 100%;
+      }
+      @include breakpoint(700px) {
+        left: 0;
+      }
+    }
+  }
+  .btn {
+    width: 180px;
+    display: inline-block;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75em;
+    text-decoration: none;
+    transition: $dt;
+    background: $gold;
+    color: $white;
+    letter-spacing: 2px;
+    &:hover {
+      background: #000;
+    }
+  }
+  .ftd-news {
+    width: 100%;
+    padding: 120px 0 60px;
+    h2 {
+      font-weight: 900;
+      font-size: 1.375em;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+    .container {
+      position: relative;
+    }
+    &__inner {
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      padding-right: 0;
+      padding-left: 170px;
+      @include breakpoint(700px) {
+        padding-left: 60px;
+      }
+      @include breakpoint(600px) {
+        padding-left: 0px;
+        padding-top: 40px;
+      }
+      &:before {
+        content: '';
+        width: 230px;
+        height: 380px;
+        background: url(../resources/ftd-news.jpg) no-repeat center center;
+        background-size: cover;
+        box-shadow: $shadow-lg;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include breakpoint(700px) {
+          left: -20px;
+        }
+      }
+    }
+    &__post {
+      width: 800px;
+      max-width: 100%;
+      margin: 0px 0 50px 0;
+      background: #fff;
+      box-shadow: $shadow-lg;
+      position: relative;
+      z-index: 10;
+      padding: 30px;
+      padding-left: 90px;
+      padding-bottom: 80px;
+      .btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .date {
+        color: #D0D1D0;
+        font-weight: 900;
+        font-size: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        span {
+          font-size: 17px;
+          display: block;
+        }
+      }
+    }
+    &__content {
+      max-width: 550px;
+      h3 {
+        font-weight: 900;
+        font-size: 1.125em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      p {
+        line-height: 2;
+      }
+    }
+    &__link {
+      position: absolute;
+      right: 0;
+      color: $gold;
+      transition: $dt;
+      font-family: 1.25em;
+      padding-bottom: 5px;
+      text-decoration: none;
+      &:before {
+        content: '';
+        width: calc(100% - 20px);
+        height: 1px;
+        background: $gold;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        transition: $dt;
+        transform-origin: left;
+      }
+      &:hover {
+        text-decoration: none;
+        &:before {
+          transform: scale(0);
+        }
+        svg {
+          transform: translateX(-5px);
+        }
+      }
+      svg {
+        transition: $dt;
+        margin-left: 10px;
+        display: inline-block;
+        width: 9px;
+        height: 14px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  .brands {
+    width: 100%;
+    padding: 140px 0;
+    position: relative;
+    background: url(../resources/ftd-bg.jpg) center center no-repeat;
+    background-size: contain;
+    @include breakpoint(900px) {
+      padding: 80px 0;
+    }
+    &__intro {
+      width: 550px;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      h2 {
+        font-weight: 900;
+        font-size: 1.375em;
+        line-height: 1.4;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      p {
+        line-height: 2;
+      }
+    }
+    &__grid {
+      margin-top: 60px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+    &__item {
+      width: calc((100% / 3) - 30px);
+      margin: 0 15px 30px;
+      text-align: center;
+      background: $white;
+      padding: 30px;
+      position: relative;
+      border: 1px solid transparent;
+      transition: $dt;
+      @include breakpoint(960px) {
+        width: calc(50% - 30px);
+      }
+      @include breakpoint(600px) {
+        width: calc(50% - 20px);
+        margin: 0 10px 20px;
+      }
+      &:hover {
+        border: 1px solid #dadada;
+        &:before {
+          opacity: 0;
+        }
+        h3 {
+          transform: translateY(-2px);
+        }
+      }
+      &:before {
+        @include content100;
+        box-shadow: $shadow-lg;
+        transition: $dt;
+      }
+      img {
+        width: 220px;
+        max-width: 100%;
+        display: inline-block;
+      }
+      h3 {
+        transition: $dt;
+        font-weight: 900;
+        font-size: .875em;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: .75em;
+      }
+      .cover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        text-indent: -999em;
+      }
+    }
+  }
+  .ftd-footer {
+    width: 100%;
+    padding: 60px 0;
+    background: url(../resources/ftd-footer.jpg) no-repeat center center;
+    background-size: cover;
+    color: $white;
+    @include breakpoint(900px) {
+      padding: 40px 0;
+    }
+    a {
+      color: $gold;
+      transition: $dt;
+      text-decoration: none;
+      &:hover {
+        color: $white;
+      }
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &__links {
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      justify-content: space-between;
+      @include breakpoint(680px) {
+        max-width: 100%;
+      }
+      ul {
+        width: 48%;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        display: block;
+        font-size: .875em;
+        padding: 5px 0;
+      }
+    }
+    &__info {
+      text-align: right;
+      @include breakpoint(680px) {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,.1);
+      }
+      img {
+        display: inline-block;
+        width: 80px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: .75em;
+        line-height: 1.9;
+      }
+      a {
+        font-size: .75em;
+      }
+      ul {
+        li {
+          display: inline-block;
+          &:last-of-type {
+            margin-left: 5px;
+            padding-left: 10px;
+            position: relative;
+            &:before {
+              content: '';
+              width: 1px;
+              height: 10px;
+              left: 0;
+              top: 6px;
+              background: $gold;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+}

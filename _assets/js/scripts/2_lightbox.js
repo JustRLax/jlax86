@@ -8,7 +8,15 @@ $('.play').magnificPopup({
     enableEscapeKey: true,
     removalDelay: 700
 });
-
+$('.open-image').magnificPopup({
+	type: 'image',
+  fixedContentPos: true,
+  fixedBgPos: true,
+  showCloseBtn: true,
+  closeOnBgClick: true,
+  removalDelay: 500,
+  enableEscapeKey: true
+});
 $('.open-modal').magnificPopup({
 	type: 'inline',
   fixedContentPos: true,

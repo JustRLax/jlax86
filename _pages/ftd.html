@@ -1,0 +1,197 @@
+---
+layout: default
+title: FTD | jlax86.com
+permalink: "/ftd/"
+about: <p><strong>I'm a master front-end designer</strong> from Chicago with 7+ years of professional experience. I am currently working freelance and previously
+  I worked at <a href="https://www.soliddigital.com/" target="_blank">Solid Digital</a>,
+  <a href="https://www.gorillagroup.com/" target="_blank">Gorilla Group</a>, <a href="https://www.realart.com/"
+  target="_blank">Real Art</a>, <a href="https://www.realart.com/" target="_blank">Usman
+  Group</a> . I recently saw your opening for a <strong>UX Designer</strong> and decided to showcase my skills with this page created just for FTD. Contact me if you're interested in doing some great work together!</p>
+intro_name: Justin Laxamana
+client_work:
+  intro: Client Work
+  description: "<p>If you're interested in working with me and curious to see some
+    of the work that I've done, the following is a collection of projects that I produced
+    for a variety of industries throughout my career.</p>"
+  button_text: View Projects
+  button_url: "#"
+  background: "/v1547845671/project_bg.jpg"
+drift_videos:
+  title: Drift Videos
+  description: "<p>I have always had a love for Japanese car culture. I started bringing
+    my DSLR to drift events and making little edits for the drifting community on
+    Instagram. After positive feedback, I've decided to host some videos on this website.</p>"
+  dropdown:
+  - page_name: Final Bout 3
+    page_url: "/fb3"
+  - page_name: Super D Matsuri 2018
+    page_url: "/matsuri"
+  - page_name: Club FR Jam 2018
+    page_url: "/jam"
+  - page_name: Super D Midwest Trial
+    page_url: "/mwt"
+  - page_name: Rio Bash
+    page_url: "/rio"
+  - page_name: Miscellaneous
+    page_url: "/misc"
+  background: "/v1542236652/drift-bg.jpg"
+undefined: []
+featured_project:
+  title: Learn Drifting
+  description: "<p></p>"
+  video_poster: "/v1547845671/ld-bg.jpg"
+  video_url: ''
+  video_preview: https://res.cloudinary.com/justinlaxamana/image/upload/v1552931738/ld-preview-.gif
+  youtube_url: https://www.youtube.com/watch?v=mVJaldXCs-w
+  video_preview_text: Driving Video Preview
+  project_description: "<p>Learn Drifting is a brand that strives to preserve the
+    origins of stylish drifting in Japan by providing a hub for education and a video
+    series that encourages using driving simulators to improve drift and driving techniques.
+    In this project I've been able to incorporate my love for driving, designing,
+    coding, music and video into a single project. Take a look at the driving video
+    preview to see a sneak peek of the video series.</p>"
+
+---
+<div class="scene intro">
+  <a href="#about" class="scene__sun anchor">
+    {% svg ../../assets/resources/jlax-logo.svg %}
+    <span class="hello">Welcome to jlax86.com</span>
+  </a> <!-- / __sun -->
+  <div class="scene__sky scene__sky--dark"></div>
+  <div class="scene__sky scene__sky--light"></div>
+  <div class="scene__hills-back">
+    {% svg ../../assets/resources/hills-back.svg %}
+  </div> <!-- / __hills-back -->
+  <div class="scene__hills-front">
+    {% svg ../../assets/resources/hills-front.svg %}
+  </div> <!-- / __hills-front -->
+  <div class="scene__city">
+    {% svg ../../assets/resources/city.svg %}
+  </div> <!-- / __city -->
+  <div class="scene__water"></div> <!-- / __water -->
+  <div class="scene__foreground ground">
+    <div class="scene__foreground__left">
+      {% svg ../../assets/resources/foreground.svg %}
+    </div> <!-- / __left -->
+    <div class="scene__foreground__right">
+      {% svg ../../assets/resources/foreground-cap.svg %}
+    </div> <!-- / __right -->
+    <ul class="scene__items">
+      <li class="scene__items__speedbag item" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <a href="#fight" class="fight-modal">
+          {% svg ../../assets/resources/speedbag.svg %}
+        </a>
+      </li> <!-- / __sniper -->
+      <li class="scene__items__bike item" data-aos="fade-right" data-aos-delay="470" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+        <a href="#bikes" class="open-slider bikes-modal">
+        {% svg ../../assets/resources/bike.svg %}
+        </a>
+      </li> <!-- / __bike -->
+      <li class="scene__items__helmet item" data-aos="fade-down" data-aos-delay="460" data-aos-easing="ease-in-out" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+        <a href="#cars" class="cars-modal">
+          {% svg ../../assets/resources/helmet.svg %}
+        </a>
+        <!--<div class="tooltip">
+          <p>86</p>
+        </div>  / .tooltip -->
+      </li> <!-- / __helmet -->
+      <li class="scene__items__cat item" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <a href="#" class="cat-modal">
+          {% svg ../../assets/resources/cat.svg %}
+        </a>
+      </li> <!-- / __cat -->
+    </ul> <!-- / __items -->
+  </div> <!-- / __foreground -->
+  <div class="scene__bird scene__bird--higher">
+    {% svg ../../assets/resources/bird.svg %}
+  </div> <!-- / __bird -->
+  <div class="scene__bird scene__bird--lower">
+    {% svg ../../assets/resources/bird.svg %}
+  </div> <!-- / __bird -->
+</div> <!-- / .scene -->
+<div class="foreground ground">
+  <div class="about">
+    <span id="about"></span>
+    <div class="container">
+      <section class="about__content">
+        <h2 class="about__heading" data-aos="fade-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">{{ page.intro_name }}</h2>
+        <p>{{ page.about }}</p>
+      </section> <!-- / __content -->
+    </div> <!-- / .container -->
+    <div class="about__jagged">
+      {% svg ../../assets/resources/jagged.svg %}
+    </div> <!-- / __jagged -->
+  </div> <!-- / .about -->
+  <div class="portfolio">
+    <div class="container">
+      <section class="portfolio__content">
+        <h2 class="portfolio__heading">Design Process / Portfolio</h2>
+      </section> <!-- / __content -->
+      <div class="portfolio__jagged">
+        {% svg ../../assets/resources/jagged.svg %}
+      </div> <!-- / __jagged -->
+    </div> <!-- / .container -->
+  </div> <!-- / .portfolio -->
+  <div class="projects">
+    <div class="projects__project projects__project--fixed flip" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload/sketch-bg.jpg);">
+      <section class="projects__block" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <h2>Wireframes / Sketching</h2>
+        <p>I decided to redesign the homepage of <a target="_blank" href="http://www.ftdcompanies.com/">www.ftdcompanies.com</a> as a way to showcase my skills and illustrate my design process. First after initial discovery, I sketch out my ideas and wireframe the layout helping me to establish the visual hierarchy.</p>
+        <a href="https://res.cloudinary.com/justinlaxamana/image/upload/ftd-sketch.jpg" class="button open-image">View Wireframe</a>
+      </section> <!-- / __block -->
+    </div> <!-- / __project -->
+    <div class="projects__project projects__project--fixed" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload/mockup.png);">
+      <section class="projects__block" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <h2>Mockups</h2>
+        <p>After wireframes, I'll move into creating mockups. In this phase I establish color, typography, imagery and content. I designed this page in Sketch, but I am also experienced in Photoshop, Illustrator, Figma, and Invision.</p>
+        <a href="https://res.cloudinary.com/justinlaxamana/image/upload/ftd-mockup.jpg" class="button open-image">View Mockup</a>
+      </section> <!-- / __block -->
+    </div> <!-- / __project -->
+    <div class="projects__project projects__project--fixed flip" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload/codebg.jpg);">
+      <section class="projects__block" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <h2>Prototypes</h2>
+        <p>After the mockups are created, I take the designs and turn them into a working prototypes using HTML5, CSS3, and presentational JS. This phase also includes responsive design and decisions to allow for flexible content. After this phase, the layouts will be ready to be sent to back-end development for integration.</p>
+        <a href="/ftd-demo" class="button">View Prototype</a>
+      </section> <!-- / __block -->
+    </div> <!-- / __project -->
+    <div class="projects__project projects__project--fixed" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload{{ page.client_work.background }});">
+      <section class="projects__block" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <h2>{{ page.client_work.intro }}</h2>
+        {{ page.client_work.description }}
+        <a href="{{ page.client_work.button_url }}" class="button alert">{{ page.client_work.button_text }}</a>
+      </section> <!-- / __block -->
+    </div> <!-- / __project -->
+    <div class="projects__project projects__project--fixed flip" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload{{ page.drift_videos.background }});">
+      <section class="projects__block" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+        <h2>{{ page.drift_videos.title }}</h2>
+        {{ page.drift_videos.description }}
+        <a href="/drift" class="button">View Videos</a>
+      </section> <!-- / __block -->
+    </div> <!-- / __project -->
+    <div class="projects__project projects__project--dark last-project">
+      <div class="projects__two-col">
+        <div class="container">
+          <div class="logo" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+            {% svg ../../assets/resources/learn-drifting-logo.svg %}
+          </div> <!-- / .logo -->
+          <div class="col" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+            <h2>{{ page.featured_project.title }}</h2>
+            {{ page.featured_project.project_description }}
+          </div> <!-- / .col -->
+          <div class="col" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+            <div class="preview">
+              <figure>
+                <img src="{{ page.featured_project.video_preview }}" alt="{{ page.featured_project.title }} Preview">
+                <div class="preview__info">
+                  <a href="{{ page.featured_project.youtube_url }}" class="preview__link play">{% svg ../../assets/resources/play.svg %} <span>{{ page.featured_project.video_preview_text }}</span></a>
+                </div> <!-- / __info -->
+              </figure>
+            </div> <!-- / .preview -->
+          </div> <!-- / .col -->
+        </div> <!-- / .container -->
+      </div> <!-- / __two-col -->
+      <div class="image-bg" style="background-image:url(https://res.cloudinary.com/justinlaxamana/image/upload{{ page.featured_project.video_poster }});">
+			</div><!-- / image-bg -->
+    </div> <!-- / __project -->
+  </div> <!-- / .projects -->
+</div> <!-- / .foreground -->

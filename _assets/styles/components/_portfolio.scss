@@ -15,7 +15,8 @@
       font-size: 80%;
     }
     h2 {
-      width: 250px;
+      width: 450px;
+      max-width: 100%;
       @include h2;
       color: $purple;
       letter-spacing:  5px;
