@@ -2,8 +2,10 @@
 .ftd-page {
   font-family: $mon;
   width: 100%;
+  background: $white;
   overflow-x: hidden;
   position: relative;
+  z-index: 10;
   .container {
     max-width: 1280px;
     @include breakpoint(700px) {
