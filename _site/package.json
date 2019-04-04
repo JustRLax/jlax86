@@ -1,12 +1,12 @@
 {
-  "name": "jordandwhalen",
+  "name": "jlax86",
   "version": "0.1.0",
   "description": "",
   "main": "gulpfile.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JordanDWhalen/jordandwhalen-jam.git"
+    "url": "https://github.com/JustRLax/jlax86"
   },
   "scripts": {
     "build": "gulp default",
