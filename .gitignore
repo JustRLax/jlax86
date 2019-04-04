@@ -5,8 +5,4 @@ node_modules/
 site.retry
 *.log
 src/vendor/*
-_site/package-lock.json
 package-lock.json
-_site/google7c8fae6af1b3f978.html
-google7c8fae6af1b3f978.html
-Gemfile.lock
