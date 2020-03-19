@@ -326,7 +326,7 @@
           transition: $dt;
           &:before {
             @include content100;
-            background: $black-grad;
+            //background: $black-grad;
           }
           .play {
             position: absolute;
