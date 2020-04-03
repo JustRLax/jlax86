@@ -26,18 +26,23 @@ header:
   link:
   - title: Home
     url: "/"
+    alert: false
   - title: Client Work
     url: "#"
     alert: true
   - title: Drift Videos
     url: "/drift"
+    alert: false
   - title: Contact
     url: "/contact"
+    alert: false
+  dropdown: []
+  button: []
 footer:
   email: mailto:hello@jlax86.com
   linkedin: https://www.linkedin.com/in/justrlax/
   instagram: https://www.instagram.com/jlax86/
   dribbble: https://dribbble.com/jlax86
   codepen: https://codepen.io/jlax86/
-  details: "© Copyright 2019. All Rights Reserved. Justin Laxamana"
+  details: "© Copyright 2020. All Rights Reserved. Justin Laxamana"
 sitebase: ''
